@@ -7,6 +7,9 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import WhatsAppFloat from "@/components/WhatsAppFloat";
 
 import appCss from "../styles.css?url";
 
@@ -72,19 +75,74 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Real Tamilnadu Painters | Best Painting Contractors in Tamil Nadu" },
+      { name: "description", content: "Real Tamilnadu Painters - Tamil Nadu's #1 premium painting contractors. Professional interior, exterior, texture & waterproof painting services in Coimbatore, Chennai, Madurai. Call +91 86800 46800" },
+      { name: "author", content: "Real Tamilnadu Painters" },
+      { name: "keywords", content: "painting contractors Tamil Nadu, best painters Coimbatore, interior painting Chennai, exterior painting services, house painters near me, waterproof painting contractors, texture painting experts" },
+      { property: "og:title", content: "Real Tamilnadu Painters | Premium Painting Contractors" },
+      { property: "og:description", content: "Tamil Nadu's most trusted painting contractors. Professional painting services with luxury finishing across Tamil Nadu." },
       { property: "og:type", content: "website" },
+      { property: "og:locale", content: "en_IN" },
+      { property: "og:site_name", content: "Real Tamilnadu Painters" },
       { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Real Tamilnadu Painters | Best Painting Contractors" },
+      { name: "twitter:description", content: "Professional painting services in Tamil Nadu. Interior, exterior, texture & waterproof painting." },
+      { name: "robots", content: "index, follow" },
+      { name: "geo.region", content: "IN-TN" },
+      { name: "geo.placename", content: "Coimbatore" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      {
+        rel: "canonical",
+        href: "https://realtamilnadupainters.com",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "@id": "https://realtamilnadupainters.com",
+          name: "Real Tamilnadu Painters",
+          image: "https://realtamilnadupainters.com/logo.png",
+          description: "Tamil Nadu's most trusted premium painting contractors offering interior, exterior, texture and waterproof painting services.",
+          telephone: "+918680046800",
+          email: "realtamilnadupainters2022@gmail.com",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "10 Sindhu Nagar, Anjugam Nagar, Chinnavedampatti",
+            addressLocality: "Coimbatore",
+            addressRegion: "Tamil Nadu",
+            postalCode: "641049",
+            addressCountry: "IN",
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: "11.02",
+            longitude: "76.94",
+          },
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "5.0",
+            reviewCount: "41",
+          },
+          priceRange: "₹₹",
+          openingHoursSpecification: {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+            opens: "08:00",
+            closes: "20:00",
+          },
+          areaServed: [
+            "Coimbatore","Chennai","Madurai","Trichy","Salem","Erode","Tiruppur","Kerala","Karnataka"
+          ],
+          sameAs: [],
+        }),
       },
     ],
   }),
@@ -113,7 +171,12 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+      <WhatsAppFloat />
     </QueryClientProvider>
   );
 }
