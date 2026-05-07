@@ -15,6 +15,7 @@ import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesIndexRouteImport } from './routes/services.index'
 import { Route as ServicesWaterproofPaintingRouteImport } from './routes/services.waterproof-painting'
 import { Route as ServicesLuxuryHomePaintingRouteImport } from './routes/services.luxury-home-painting'
 import { Route as ServicesHousePaintingRouteImport } from './routes/services.house-painting'
@@ -50,6 +51,11 @@ const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
+} as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServicesRoute,
 } as any)
 const ServicesWaterproofPaintingRoute =
   ServicesWaterproofPaintingRouteImport.update({
@@ -93,6 +99,7 @@ export interface FileRoutesByFullPath {
   '/services/house-painting': typeof ServicesHousePaintingRoute
   '/services/luxury-home-painting': typeof ServicesLuxuryHomePaintingRoute
   '/services/waterproof-painting': typeof ServicesWaterproofPaintingRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -100,12 +107,12 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/reviews': typeof ReviewsRoute
-  '/services': typeof ServicesRouteWithChildren
   '/services/commercial-painting': typeof ServicesCommercialPaintingRoute
   '/services/exterior-painting': typeof ServicesExteriorPaintingRoute
   '/services/house-painting': typeof ServicesHousePaintingRoute
   '/services/luxury-home-painting': typeof ServicesLuxuryHomePaintingRoute
   '/services/waterproof-painting': typeof ServicesWaterproofPaintingRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -120,6 +127,7 @@ export interface FileRoutesById {
   '/services/house-painting': typeof ServicesHousePaintingRoute
   '/services/luxury-home-painting': typeof ServicesLuxuryHomePaintingRoute
   '/services/waterproof-painting': typeof ServicesWaterproofPaintingRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -135,6 +143,7 @@ export interface FileRouteTypes {
     | '/services/house-painting'
     | '/services/luxury-home-painting'
     | '/services/waterproof-painting'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -142,12 +151,12 @@ export interface FileRouteTypes {
     | '/contact'
     | '/gallery'
     | '/reviews'
-    | '/services'
     | '/services/commercial-painting'
     | '/services/exterior-painting'
     | '/services/house-painting'
     | '/services/luxury-home-painting'
     | '/services/waterproof-painting'
+    | '/services'
   id:
     | '__root__'
     | '/'
@@ -161,6 +170,7 @@ export interface FileRouteTypes {
     | '/services/house-painting'
     | '/services/luxury-home-painting'
     | '/services/waterproof-painting'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -216,6 +226,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/': {
+      id: '/services/'
+      path: '/'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof ServicesRoute
+    }
     '/services/waterproof-painting': {
       id: '/services/waterproof-painting'
       path: '/waterproof-painting'
@@ -260,6 +277,7 @@ interface ServicesRouteChildren {
   ServicesHousePaintingRoute: typeof ServicesHousePaintingRoute
   ServicesLuxuryHomePaintingRoute: typeof ServicesLuxuryHomePaintingRoute
   ServicesWaterproofPaintingRoute: typeof ServicesWaterproofPaintingRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
 }
 
 const ServicesRouteChildren: ServicesRouteChildren = {
@@ -268,6 +286,7 @@ const ServicesRouteChildren: ServicesRouteChildren = {
   ServicesHousePaintingRoute: ServicesHousePaintingRoute,
   ServicesLuxuryHomePaintingRoute: ServicesLuxuryHomePaintingRoute,
   ServicesWaterproofPaintingRoute: ServicesWaterproofPaintingRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
 }
 
 const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
@@ -285,3 +304,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
