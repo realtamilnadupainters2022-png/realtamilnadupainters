@@ -15,6 +15,12 @@ import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ServicesIndexRouteImport } from './routes/services.index'
+import { Route as ServicesWaterproofPaintingRouteImport } from './routes/services.waterproof-painting'
+import { Route as ServicesLuxuryHomePaintingRouteImport } from './routes/services.luxury-home-painting'
+import { Route as ServicesHousePaintingRouteImport } from './routes/services.house-painting'
+import { Route as ServicesExteriorPaintingRouteImport } from './routes/services.exterior-painting'
+import { Route as ServicesCommercialPaintingRouteImport } from './routes/services.commercial-painting'
 
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
@@ -46,6 +52,40 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ServicesIndexRoute = ServicesIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesWaterproofPaintingRoute =
+  ServicesWaterproofPaintingRouteImport.update({
+    id: '/waterproof-painting',
+    path: '/waterproof-painting',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesLuxuryHomePaintingRoute =
+  ServicesLuxuryHomePaintingRouteImport.update({
+    id: '/luxury-home-painting',
+    path: '/luxury-home-painting',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesHousePaintingRoute = ServicesHousePaintingRouteImport.update({
+  id: '/house-painting',
+  path: '/house-painting',
+  getParentRoute: () => ServicesRoute,
+} as any)
+const ServicesExteriorPaintingRoute =
+  ServicesExteriorPaintingRouteImport.update({
+    id: '/exterior-painting',
+    path: '/exterior-painting',
+    getParentRoute: () => ServicesRoute,
+  } as any)
+const ServicesCommercialPaintingRoute =
+  ServicesCommercialPaintingRouteImport.update({
+    id: '/commercial-painting',
+    path: '/commercial-painting',
+    getParentRoute: () => ServicesRoute,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -53,7 +93,13 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/reviews': typeof ReviewsRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
+  '/services/commercial-painting': typeof ServicesCommercialPaintingRoute
+  '/services/exterior-painting': typeof ServicesExteriorPaintingRoute
+  '/services/house-painting': typeof ServicesHousePaintingRoute
+  '/services/luxury-home-painting': typeof ServicesLuxuryHomePaintingRoute
+  '/services/waterproof-painting': typeof ServicesWaterproofPaintingRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -61,7 +107,12 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/reviews': typeof ReviewsRoute
-  '/services': typeof ServicesRoute
+  '/services/commercial-painting': typeof ServicesCommercialPaintingRoute
+  '/services/exterior-painting': typeof ServicesExteriorPaintingRoute
+  '/services/house-painting': typeof ServicesHousePaintingRoute
+  '/services/luxury-home-painting': typeof ServicesLuxuryHomePaintingRoute
+  '/services/waterproof-painting': typeof ServicesWaterproofPaintingRoute
+  '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -70,13 +121,42 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/reviews': typeof ReviewsRoute
-  '/services': typeof ServicesRoute
+  '/services': typeof ServicesRouteWithChildren
+  '/services/commercial-painting': typeof ServicesCommercialPaintingRoute
+  '/services/exterior-painting': typeof ServicesExteriorPaintingRoute
+  '/services/house-painting': typeof ServicesHousePaintingRoute
+  '/services/luxury-home-painting': typeof ServicesLuxuryHomePaintingRoute
+  '/services/waterproof-painting': typeof ServicesWaterproofPaintingRoute
+  '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/contact' | '/gallery' | '/reviews' | '/services'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/gallery'
+    | '/reviews'
+    | '/services'
+    | '/services/commercial-painting'
+    | '/services/exterior-painting'
+    | '/services/house-painting'
+    | '/services/luxury-home-painting'
+    | '/services/waterproof-painting'
+    | '/services/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/contact' | '/gallery' | '/reviews' | '/services'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/gallery'
+    | '/reviews'
+    | '/services/commercial-painting'
+    | '/services/exterior-painting'
+    | '/services/house-painting'
+    | '/services/luxury-home-painting'
+    | '/services/waterproof-painting'
+    | '/services'
   id:
     | '__root__'
     | '/'
@@ -85,6 +165,12 @@ export interface FileRouteTypes {
     | '/gallery'
     | '/reviews'
     | '/services'
+    | '/services/commercial-painting'
+    | '/services/exterior-painting'
+    | '/services/house-painting'
+    | '/services/luxury-home-painting'
+    | '/services/waterproof-painting'
+    | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -93,7 +179,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   GalleryRoute: typeof GalleryRoute
   ReviewsRoute: typeof ReviewsRoute
-  ServicesRoute: typeof ServicesRoute
+  ServicesRoute: typeof ServicesRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -140,8 +226,72 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/services/': {
+      id: '/services/'
+      path: '/'
+      fullPath: '/services/'
+      preLoaderRoute: typeof ServicesIndexRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/waterproof-painting': {
+      id: '/services/waterproof-painting'
+      path: '/waterproof-painting'
+      fullPath: '/services/waterproof-painting'
+      preLoaderRoute: typeof ServicesWaterproofPaintingRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/luxury-home-painting': {
+      id: '/services/luxury-home-painting'
+      path: '/luxury-home-painting'
+      fullPath: '/services/luxury-home-painting'
+      preLoaderRoute: typeof ServicesLuxuryHomePaintingRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/house-painting': {
+      id: '/services/house-painting'
+      path: '/house-painting'
+      fullPath: '/services/house-painting'
+      preLoaderRoute: typeof ServicesHousePaintingRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/exterior-painting': {
+      id: '/services/exterior-painting'
+      path: '/exterior-painting'
+      fullPath: '/services/exterior-painting'
+      preLoaderRoute: typeof ServicesExteriorPaintingRouteImport
+      parentRoute: typeof ServicesRoute
+    }
+    '/services/commercial-painting': {
+      id: '/services/commercial-painting'
+      path: '/commercial-painting'
+      fullPath: '/services/commercial-painting'
+      preLoaderRoute: typeof ServicesCommercialPaintingRouteImport
+      parentRoute: typeof ServicesRoute
+    }
   }
 }
+
+interface ServicesRouteChildren {
+  ServicesCommercialPaintingRoute: typeof ServicesCommercialPaintingRoute
+  ServicesExteriorPaintingRoute: typeof ServicesExteriorPaintingRoute
+  ServicesHousePaintingRoute: typeof ServicesHousePaintingRoute
+  ServicesLuxuryHomePaintingRoute: typeof ServicesLuxuryHomePaintingRoute
+  ServicesWaterproofPaintingRoute: typeof ServicesWaterproofPaintingRoute
+  ServicesIndexRoute: typeof ServicesIndexRoute
+}
+
+const ServicesRouteChildren: ServicesRouteChildren = {
+  ServicesCommercialPaintingRoute: ServicesCommercialPaintingRoute,
+  ServicesExteriorPaintingRoute: ServicesExteriorPaintingRoute,
+  ServicesHousePaintingRoute: ServicesHousePaintingRoute,
+  ServicesLuxuryHomePaintingRoute: ServicesLuxuryHomePaintingRoute,
+  ServicesWaterproofPaintingRoute: ServicesWaterproofPaintingRoute,
+  ServicesIndexRoute: ServicesIndexRoute,
+}
+
+const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
+  ServicesRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -149,7 +299,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   GalleryRoute: GalleryRoute,
   ReviewsRoute: ReviewsRoute,
-  ServicesRoute: ServicesRoute,
+  ServicesRoute: ServicesRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
