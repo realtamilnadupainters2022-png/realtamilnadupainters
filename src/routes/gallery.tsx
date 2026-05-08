@@ -1,11 +1,14 @@
 import { createFileRoute } from "@tanstack/react-router";
 import SectionHeading from "@/components/SectionHeading";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
+import project1 from "@/assets/project-1.jpg";
+import project2 from "@/assets/project-2.jpg";
+import project3 from "@/assets/project-3.jpg";
+import project4 from "@/assets/project-4.jpg";
+import project5 from "@/assets/project-5.jpg";
+import project6 from "@/assets/project-6.jpg";
+import project7 from "@/assets/project-7.jpg";
+import project8 from "@/assets/project-8.jpg";
+import project9 from "@/assets/project-9.jpg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -20,12 +23,15 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const projects = [
-  { img: gallery1, title: "Modern Apartment Interior", loc: "Coimbatore", cat: "Interior Painting" },
-  { img: gallery2, title: "Premium Villa Exterior", loc: "Chennai", cat: "Exterior Painting" },
-  { img: gallery3, title: "Luxury Texture Finish", loc: "Madurai", cat: "Texture Painting" },
-  { img: gallery4, title: "Corporate Office Painting", loc: "Coimbatore", cat: "Commercial Painting" },
-  { img: gallery5, title: "Waterproof Villa Coating", loc: "Tiruppur", cat: "Waterproof Painting" },
-  { img: gallery6, title: "Premium Wood Polishing", loc: "Salem", cat: "Wood Polish" },
+  { img: project1, title: "Modern Elevation Exterior", loc: "Coimbatore", cat: "Exterior Painting" },
+  { img: project2, title: "Premium Interior Texture", loc: "Coimbatore", cat: "Interior Painting" },
+  { img: project3, title: "Blue & White Exterior", loc: "Tamil Nadu", cat: "Exterior Painting" },
+  { img: project4, title: "Designer Wallpaper Finish", loc: "Coimbatore", cat: "Texture Painting" },
+  { img: project5, title: "Geometric Wall Art", loc: "Tamil Nadu", cat: "Decorative Painting" },
+  { img: project6, title: "Artistic Texture Wall", loc: "Coimbatore", cat: "Texture Painting" },
+  { img: project7, title: "Colorful Building Exterior", loc: "Tamil Nadu", cat: "Exterior Painting" },
+  { img: project8, title: "Premium White Villa", loc: "Coimbatore", cat: "Exterior Painting" },
+  { img: project9, title: "Modern Grey & Orange Elevation", loc: "Tamil Nadu", cat: "Exterior Painting" },
 ];
 
 function GalleryPage() {

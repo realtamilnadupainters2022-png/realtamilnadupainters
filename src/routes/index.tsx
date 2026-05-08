@@ -3,9 +3,11 @@ import { Link } from "@tanstack/react-router";
 import { Star, Shield, Clock, Award, ChevronRight, Phone, Users, CheckCircle, Paintbrush, Home, Building2, Droplets } from "lucide-react";
 import heroImg from "@/assets/hero-bg.jpg";
 import founderImg from "@/assets/founder-rajesh.jpg";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
+import project1 from "@/assets/project-1.jpg";
+import project2 from "@/assets/project-2.jpg";
+import project3 from "@/assets/project-3.jpg";
+import project5 from "@/assets/project-5.jpg";
+import logoImg from "@/assets/logo.png";
 import SectionHeading from "@/components/SectionHeading";
 
 export const Route = createFileRoute("/")({
@@ -25,8 +27,8 @@ const WHATSAPP_URL = "https://wa.me/918680046800?text=Hi%20Real%20Tamilnadu%20Pa
 const stats = [
   { num: "41+", label: "Happy Clients", icon: Users },
   { num: "5.0", label: "Google Rating", icon: Star },
-  { num: "100+", label: "Projects Done", icon: CheckCircle },
-  { num: "4+", label: "Years Experience", icon: Award },
+  { num: "500+", label: "Projects Done", icon: CheckCircle },
+  { num: "14+", label: "Years Experience", icon: Award },
 ];
 
 const featuredServices = [
@@ -90,7 +92,10 @@ function Index() {
       </section>
 
       {/* Services Preview */}
-      <section className="py-20 sm:py-28 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Our Services">
+      <section className="py-20 sm:py-28 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative" aria-label="Our Services">
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <img src={logoImg} alt="" className="w-64 sm:w-96 opacity-[0.06]" aria-hidden="true" />
+        </div>
         <SectionHeading badge="Our Services" title="Premium Painting Services" subtitle="From interior makeovers to exterior transformations, we deliver luxury-grade painting across Tamil Nadu with unmatched quality and professionalism." />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {featuredServices.map((s) => (
@@ -134,7 +139,7 @@ function Index() {
                   </div>
                   <div className="w-16 h-1 gradient-gold rounded-full mb-6" />
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    Rajesh founded Real Tamilnadu Painters with a vision to deliver premium-quality painting services with professional finishing, honest pricing, and customer satisfaction across Tamil Nadu. His dedication to quality workmanship and attention to detail has helped build strong trust among homeowners and commercial clients.
+                    Rajesh founded Real Tamilnadu Painters with a vision to deliver premium-quality painting services with professional finishing, honest pricing, and customer satisfaction across Tamil Nadu. His dedication to quality workmanship and attention to detail has helped build strong trust among homeowners and commercial clients. Rajesh received the prestigious <strong className="text-foreground">Best Painting Contractor in Tamil Nadu</strong> award from Asian Paints — a testament to his exceptional craftsmanship and commitment to excellence.
                   </p>
                   <div className="grid grid-cols-2 gap-4">
                     {[
@@ -161,9 +166,9 @@ function Index() {
         <SectionHeading badge="Our Work" title="Recent Projects" subtitle="Explore our premium painting projects across Tamil Nadu - from luxury villas to modern apartments and commercial spaces." />
         <div className="grid md:grid-cols-3 gap-6">
           {[
-            { img: gallery1, title: "Modern Apartment Interior", loc: "Coimbatore" },
-            { img: gallery2, title: "Premium Villa Exterior", loc: "Chennai" },
-            { img: gallery3, title: "Luxury Texture Finish", loc: "Madurai" },
+            { img: project1, title: "Modern Elevation Exterior", loc: "Coimbatore" },
+            { img: project2, title: "Premium Interior Texture", loc: "Coimbatore" },
+            { img: project5, title: "Geometric Wall Art Design", loc: "Tamil Nadu" },
           ].map((p) => (
             <div key={p.title} className="group rounded-2xl overflow-hidden shadow-premium hover-lift">
               <div className="aspect-[4/3] overflow-hidden">

@@ -46,7 +46,7 @@ function AboutPage() {
                   <img src={founderImg} alt="Rajesh - Founder of Real Tamilnadu Painters receiving award" className="w-full object-cover" loading="lazy" width={600} height={500} />
                 </div>
                 <div className="absolute -bottom-6 -right-6 glass-card rounded-2xl p-4 shadow-premium hidden sm:block">
-                  <div className="text-3xl font-bold text-brand font-[var(--font-heading)]">4+</div>
+                  <div className="text-3xl font-bold text-brand font-[var(--font-heading)]">14+</div>
                   <div className="text-sm text-muted-foreground">Years of Excellence</div>
                 </div>
               </div>
@@ -56,6 +56,9 @@ function AboutPage() {
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground font-[var(--font-heading)] mb-6">Building Trust Through Quality Workmanship</h2>
               <p className="text-muted-foreground leading-relaxed mb-4">
                 Founded by Rajesh, Real Tamilnadu Painters started with a simple vision — to provide premium painting services that homeowners and businesses can trust. What began as a local painting service in Coimbatore has grown into Tamil Nadu's most sought-after painting contractor.
+              </p>
+              <p className="text-muted-foreground leading-relaxed mb-4">
+                Rajesh received the prestigious <strong className="text-foreground">Best Painting Contractor in Tamil Nadu</strong> award from Asian Paints — a testament to his exceptional craftsmanship and commitment to excellence.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 Our commitment to using the best materials, employing skilled craftsmen, and maintaining transparent pricing has earned us a perfect 5.0 Google rating with 41+ genuine reviews from happy customers across Tamil Nadu.
@@ -70,7 +73,7 @@ function AboutPage() {
                   <div className="text-xs text-muted-foreground mt-1">Rating</div>
                 </div>
                 <div className="text-center p-4 rounded-xl bg-secondary">
-                  <div className="text-2xl font-bold text-brand font-[var(--font-heading)]">100+</div>
+                <div className="text-2xl font-bold text-brand font-[var(--font-heading)]">500+</div>
                   <div className="text-xs text-muted-foreground mt-1">Projects</div>
                 </div>
               </div>
