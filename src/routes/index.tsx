@@ -8,6 +8,7 @@ import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project5 from "@/assets/project-5.jpg";
 import logoImg from "@/assets/logo.png";
+import brandIdentityImg from "@/assets/brand-identity.png";
 import SectionHeading from "@/components/SectionHeading";
 
 export const Route = createFileRoute("/")({
@@ -116,6 +117,48 @@ function Index() {
       </section>
 
       {/* Founder */}
+      {/* Brand Identity */}
+      <section className="py-20 sm:py-28 bg-[oklch(0.13_0.01_38)] relative overflow-hidden" aria-label="Brand Identity">
+        <div className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 20% 50%, oklch(0.78 0.15 75 / 30%), transparent 50%), radial-gradient(circle at 80% 50%, oklch(0.65 0.2 38 / 20%), transparent 50%)" }} />
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <SectionHeading badge="Our Identity" title="The Mark of Premium Craftsmanship" subtitle="A brand built on trust, quality, and the relentless pursuit of painting excellence across Tamil Nadu." />
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-10 items-center">
+              <div className="flex justify-center">
+                <div className="relative">
+                  <div className="absolute -inset-4 rounded-3xl bg-gradient-to-br from-gold/10 via-transparent to-brand/10 blur-2xl" />
+                  <img src={brandIdentityImg} alt="Real Tamilnadu Painters - Premium Brand Identity Logo featuring golden house, paintbrush, and Tamil Nadu map" className="relative w-full max-w-sm rounded-2xl shadow-premium" loading="lazy" width={600} height={700} />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-2xl sm:text-3xl font-bold text-[oklch(1_0_0)] font-[var(--font-heading)] mb-6">
+                  More Than a Logo — <span className="text-gradient-brand">A Promise</span>
+                </h3>
+                <p className="text-[oklch(0.8_0_0)] leading-relaxed mb-5">
+                  Our emblem captures everything Real Tamilnadu Painters stands for — the golden house symbolizes the dream homes we transform, while the paintbrush represents the skilled craftsmanship behind every stroke. The silhouette of Tamil Nadu proudly marks our roots and the land we serve.
+                </p>
+                <p className="text-[oklch(0.8_0_0)] leading-relaxed mb-8">
+                  The four pillars beneath our name define our core values: <strong className="text-gold">Quality You Can See</strong>, <strong className="text-gold">Service You Can Trust</strong>, <strong className="text-gold">Beauty We Deliver</strong>, and <strong className="text-gold">Perfection We Promise</strong>. Our Tamil tagline — <em>"நம் ஊர், நம் பணி, உங்கள் நம்பிக்கை"</em> — means "Our Town, Our Work, Your Trust."
+                </p>
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { num: "14+", label: "Years of Trust" },
+                    { num: "500+", label: "Projects Completed" },
+                    { num: "5.0★", label: "Google Rating" },
+                    { num: "100%", label: "Satisfaction" },
+                  ].map((s) => (
+                    <div key={s.label} className="p-4 rounded-xl bg-[oklch(1_0_0_/_5%)] border border-[oklch(1_0_0_/_8%)] text-center">
+                      <div className="text-xl font-bold text-gold font-[var(--font-heading)]">{s.num}</div>
+                      <div className="text-xs text-[oklch(0.7_0_0)] mt-1">{s.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-20 sm:py-28 bg-secondary/50" aria-label="Meet The Founder">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <SectionHeading badge="Leadership" title="Meet The Founder" />
