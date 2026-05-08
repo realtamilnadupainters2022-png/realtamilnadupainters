@@ -94,7 +94,7 @@ function Index() {
       {/* Services Preview */}
       <section className="py-20 sm:py-28 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative" aria-label="Our Services">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <img src={logoImg} alt="" className="w-64 sm:w-96 opacity-[0.06]" aria-hidden="true" />
+          <img src={logoImg} alt="" className="w-[80%] sm:w-[500px] opacity-[0.15]" aria-hidden="true" />
         </div>
         <SectionHeading badge="Our Services" title="Premium Painting Services" subtitle="From interior makeovers to exterior transformations, we deliver luxury-grade painting across Tamil Nadu with unmatched quality and professionalism." />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
