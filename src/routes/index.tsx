@@ -7,6 +7,11 @@ import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
 import project5 from "@/assets/project-5.jpg";
+import project4 from "@/assets/project-4.jpg";
+import project6 from "@/assets/project-6.jpg";
+import project7 from "@/assets/project-7.jpg";
+import project8 from "@/assets/project-8.jpg";
+import project9 from "@/assets/project-9.jpg";
 import logoImg from "@/assets/logo.png";
 import brandIdentityImg from "@/assets/brand-identity.png";
 import SectionHeading from "@/components/SectionHeading";
@@ -207,13 +212,20 @@ function Index() {
       {/* Gallery Preview */}
       <section className="py-20 sm:py-28 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Recent Projects">
         <SectionHeading badge="Our Work" title="Recent Projects" subtitle="Explore our premium painting projects across Tamil Nadu - from luxury villas to modern apartments and commercial spaces." />
-        <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 scroll-smooth">
+        <div className="overflow-x-auto pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 scroll-smooth">
+          <div className="grid grid-rows-2 grid-flow-col auto-cols-[85%] sm:auto-cols-[45%] md:auto-cols-[32%] gap-6">
           {[
             { img: project1, title: "Modern Elevation Exterior", loc: "Coimbatore" },
             { img: project2, title: "Premium Interior Texture", loc: "Coimbatore" },
+            { img: project3, title: "Blue & White Exterior", loc: "Tamil Nadu" },
+            { img: project4, title: "Designer Wallpaper Finish", loc: "Coimbatore" },
             { img: project5, title: "Geometric Wall Art Design", loc: "Tamil Nadu" },
+            { img: project6, title: "Artistic Texture Wall", loc: "Coimbatore" },
+            { img: project7, title: "Colorful Building Exterior", loc: "Tamil Nadu" },
+            { img: project8, title: "Premium White Villa", loc: "Coimbatore" },
+            { img: project9, title: "Modern Grey & Orange Elevation", loc: "Tamil Nadu" },
           ].map((p) => (
-            <div key={p.title} className="group rounded-2xl overflow-hidden shadow-premium hover-lift snap-start shrink-0 w-[85%] sm:w-[60%] md:w-[32%]">
+            <div key={p.title} className="group rounded-2xl overflow-hidden shadow-premium hover-lift">
               <div className="aspect-[4/3] overflow-hidden">
                 <img src={p.img} alt={`${p.title} - ${p.loc} - Real Tamilnadu Painters`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width={800} height={600} />
               </div>
@@ -231,6 +243,7 @@ function Index() {
               </div>
             </div>
           ))}
+          </div>
         </div>
         <div className="text-center mt-10">
           <Link to="/gallery" className="inline-flex items-center gap-2 text-brand font-semibold hover:gap-3 transition-all">

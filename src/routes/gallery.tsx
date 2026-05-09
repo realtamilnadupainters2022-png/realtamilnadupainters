@@ -49,9 +49,10 @@ function GalleryPage() {
 
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 scroll-smooth">
+          <div className="overflow-x-auto pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 scroll-smooth">
+            <div className="grid grid-rows-2 grid-flow-col auto-cols-[85%] sm:auto-cols-[45%] lg:auto-cols-[32%] gap-6">
             {projects.map((p) => (
-              <div key={p.title} className="group rounded-2xl overflow-hidden shadow-premium hover-lift snap-start shrink-0 w-[85%] sm:w-[55%] lg:w-[32%]">
+              <div key={p.title} className="group rounded-2xl overflow-hidden shadow-premium hover-lift">
                 <div className="aspect-[4/3] overflow-hidden relative">
                   <img src={p.img} alt={`${p.title} by Real Tamilnadu Painters in ${p.loc}`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width={800} height={600} />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
@@ -72,6 +73,7 @@ function GalleryPage() {
                 </div>
               </div>
             ))}
+            </div>
           </div>
         </div>
       </section>
