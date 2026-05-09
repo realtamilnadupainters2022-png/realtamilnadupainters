@@ -3,7 +3,7 @@ import { Home, Building2, Paintbrush, Droplets, Shield, Award, Layers, Wrench, S
 import SectionHeading from "@/components/SectionHeading";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
-const WHATSAPP_URL = "https://wa.me/918680046800?text=Hi%20Real%20Tamilnadu%20Painters%2C%20I%20need%20painting%20services%20for%20my%20property";
+const WHATSAPP_URL = "https://wa.me/918680046800?text=Hi%20Real%20Tamilnadu%20Painters%2C%20I%27d%20like%20to%20get%20a%20free%20estimate%20for%20painting%20service%20for%20my%20property.%20Please%20tell%20me%20more%20about%20it.";
 
 export const Route = createFileRoute("/services/")({
   head: () => ({
