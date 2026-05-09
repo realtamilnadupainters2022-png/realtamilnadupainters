@@ -220,6 +220,14 @@ function Index() {
               <div className="p-5 bg-card">
                 <h3 className="font-bold text-foreground font-[var(--font-heading)]">{p.title}</h3>
                 <p className="text-sm text-muted-foreground mt-1">{p.loc}, Tamil Nadu</p>
+                <a
+                  href={`https://wa.me/918680046800?text=${encodeURIComponent(`Hi Real Tamilnadu Painters, I'd like to book ${p.title} service for my property. Please tell me more about it.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center justify-center gap-2 w-full rounded-xl px-4 py-2.5 text-sm font-bold gradient-brand text-[oklch(1_0_0)] hover:opacity-90 transition-all"
+                >
+                  Get Started <ChevronRight className="w-4 h-4" />
+                </a>
               </div>
             </div>
           ))}
