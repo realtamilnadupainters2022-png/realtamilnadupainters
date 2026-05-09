@@ -7,7 +7,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Real Tamilnadu Painters | Best Painting Contractors in Coimbatore" },
-      { name: "description", content: "Learn about Real Tamilnadu Painters - Tamil Nadu's most trusted painting contractor founded by Rajesh. 5.0 Google Rating, 41+ happy clients across Coimbatore, Chennai, Madurai." },
+      { name: "description", content: "Learn about Real Tamilnadu Painters - Tamil Nadu's most trusted painting contractor founded by Rajesh. 5.0 Google Rating, 1000+ happy clients across Coimbatore, Chennai, Madurai." },
       { property: "og:title", content: "About Real Tamilnadu Painters" },
       { property: "og:description", content: "Tamil Nadu's most trusted painting contractors with 5.0 rating." },
     ],
@@ -61,11 +61,11 @@ function AboutPage() {
                 Rajesh received the prestigious <strong className="text-foreground">Best Painting Contractor in Tamil Nadu</strong> award from Asian Paints — a testament to his exceptional craftsmanship and commitment to excellence.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Our commitment to using the best materials, employing skilled craftsmen, and maintaining transparent pricing has earned us a perfect 5.0 Google rating with 41+ genuine reviews from happy customers across Tamil Nadu.
+                Our commitment to using the best materials, employing skilled craftsmen, and maintaining transparent pricing has earned us a perfect 5.0 Google rating with 1000+ genuine reviews from happy customers across Tamil Nadu.
               </p>
               <div className="grid grid-cols-3 gap-4">
                 <div className="text-center p-4 rounded-xl bg-secondary">
-                  <div className="text-2xl font-bold text-brand font-[var(--font-heading)]">41+</div>
+                  <div className="text-2xl font-bold text-brand font-[var(--font-heading)]">1000+</div>
                   <div className="text-xs text-muted-foreground mt-1">Happy Clients</div>
                 </div>
                 <div className="text-center p-4 rounded-xl bg-secondary">
@@ -73,7 +73,7 @@ function AboutPage() {
                   <div className="text-xs text-muted-foreground mt-1">Rating</div>
                 </div>
                 <div className="text-center p-4 rounded-xl bg-secondary">
-                <div className="text-2xl font-bold text-brand font-[var(--font-heading)]">500+</div>
+                <div className="text-2xl font-bold text-brand font-[var(--font-heading)]">1000+</div>
                   <div className="text-xs text-muted-foreground mt-1">Projects</div>
                 </div>
               </div>

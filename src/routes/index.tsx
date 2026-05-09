@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
       { title: "Real Tamilnadu Painters | #1 Best Painting Contractors in Coimbatore & Tamil Nadu" },
       { name: "description", content: "Real Tamilnadu Painters - Tamil Nadu's #1 premium painting contractors. Interior, exterior, texture & waterproof painting in Coimbatore, Chennai, Madurai. ⭐ 5.0 Rating. Call +91 86800 46800 for free estimate." },
       { property: "og:title", content: "Real Tamilnadu Painters | Best Painting Contractors in Tamil Nadu" },
-      { property: "og:description", content: "Professional painting services with luxury finishing. 41+ happy clients. Free estimates." },
+      { property: "og:description", content: "Professional painting services with luxury finishing. 1000+ happy clients. Free estimates." },
     ],
   }),
   component: Index,
@@ -26,9 +26,9 @@ export const Route = createFileRoute("/")({
 const WHATSAPP_URL = "https://wa.me/918680046800?text=Hi%20Real%20Tamilnadu%20Painters%2C%20I%20need%20painting%20services%20for%20my%20property";
 
 const stats = [
-  { num: "41+", label: "Happy Clients", icon: Users },
+  { num: "1000+", label: "Happy Clients", icon: Users },
   { num: "5.0", label: "Google Rating", icon: Star },
-  { num: "500+", label: "Projects Done", icon: CheckCircle },
+  { num: "1000+", label: "Projects Done", icon: CheckCircle },
   { num: "14+", label: "Years Experience", icon: Award },
 ];
 
@@ -56,7 +56,7 @@ function Index() {
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-6">
               <div className="flex">{[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-gold text-gold" />)}</div>
-              <span className="text-gold-light text-sm font-medium">5.0 Rating · 41+ Reviews</span>
+              <span className="text-gold-light text-sm font-medium">5.0 Rating · 1000+ Reviews</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[oklch(1_0_0)] leading-tight font-[var(--font-heading)]">
               Tamil Nadu's Trusted{" "}
@@ -64,7 +64,7 @@ function Index() {
               Contractors
             </h1>
             <p className="mt-6 text-lg text-[oklch(1_0_0_/_80%)] max-w-xl leading-relaxed">
-              Professional Interior & Exterior Painting Services with Luxury Finishing Across Tamil Nadu. Trusted by 41+ happy clients.
+              Professional Interior & Exterior Painting Services with Luxury Finishing Across Tamil Nadu. Trusted by 1000+ happy clients.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl px-8 py-4 text-base font-bold gradient-brand text-[oklch(1_0_0)] shadow-brand hover:opacity-90 transition-all hover:scale-105">
@@ -143,7 +143,7 @@ function Index() {
                 <div className="grid grid-cols-2 gap-4">
                   {[
                     { num: "14+", label: "Years of Trust" },
-                    { num: "500+", label: "Projects Completed" },
+                    { num: "1000+", label: "Projects Completed" },
                     { num: "5.0★", label: "Google Rating" },
                     { num: "100%", label: "Satisfaction" },
                   ].map((s) => (
@@ -275,7 +275,7 @@ function Index() {
             { q: "How much do painting services cost in Coimbatore?", a: "Our painting services are competitively priced starting from affordable rates. Contact us for a free estimate based on your specific requirements." },
             { q: "Do you provide waterproof painting services?", a: "Yes, we are experts in waterproof painting and coating. We use premium waterproofing materials to protect your property from dampness and moisture damage." },
             { q: "What types of painting services do you offer?", a: "We offer interior painting, exterior painting, texture painting, waterproof painting, decorative painting, wood polish, metal painting, spray painting, and more." },
-            { q: "Are you the best painters in Tamil Nadu?", a: "With a 5.0 Google rating and 41+ positive reviews, Real Tamilnadu Painters is one of the most trusted and highly rated painting contractors in Tamil Nadu." },
+            { q: "Are you the best painters in Tamil Nadu?", a: "With a 5.0 Google rating and 1000+ positive reviews, Real Tamilnadu Painters is one of the most trusted and highly rated painting contractors in Tamil Nadu." },
           ].map((faq) => (
             <details key={faq.q} className="glass-card rounded-xl p-6 group">
               <summary className="text-base font-semibold text-foreground cursor-pointer list-none flex items-center justify-between">
