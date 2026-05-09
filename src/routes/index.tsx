@@ -207,13 +207,13 @@ function Index() {
       {/* Gallery Preview */}
       <section className="py-20 sm:py-28 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Recent Projects">
         <SectionHeading badge="Our Work" title="Recent Projects" subtitle="Explore our premium painting projects across Tamil Nadu - from luxury villas to modern apartments and commercial spaces." />
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 scroll-smooth">
           {[
             { img: project1, title: "Modern Elevation Exterior", loc: "Coimbatore" },
             { img: project2, title: "Premium Interior Texture", loc: "Coimbatore" },
             { img: project5, title: "Geometric Wall Art Design", loc: "Tamil Nadu" },
           ].map((p) => (
-            <div key={p.title} className="group rounded-2xl overflow-hidden shadow-premium hover-lift">
+            <div key={p.title} className="group rounded-2xl overflow-hidden shadow-premium hover-lift snap-start shrink-0 w-[85%] sm:w-[60%] md:w-[32%]">
               <div className="aspect-[4/3] overflow-hidden">
                 <img src={p.img} alt={`${p.title} - ${p.loc} - Real Tamilnadu Painters`} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width={800} height={600} />
               </div>
