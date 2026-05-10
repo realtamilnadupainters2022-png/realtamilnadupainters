@@ -35,6 +35,7 @@ const stats = [
   { num: "5.0", label: "Google Rating", icon: Star },
   { num: "1000+", label: "Projects Done", icon: CheckCircle },
   { num: "14+", label: "Years Experience", icon: Award },
+  { num: "25+", label: "Certified Painters", icon: Paintbrush },
 ];
 
 const featuredServices = [
