@@ -1,4 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
 import { Award, Users, CheckCircle, Clock, Shield, Heart } from "lucide-react";
 import founderImg from "@/assets/founder-rajesh.jpg";
 import SectionHeading from "@/components/SectionHeading";
@@ -7,7 +8,7 @@ export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
       { title: "About Real Tamilnadu Painters | Best Painting Contractors in Coimbatore" },
-      { name: "description", content: "Learn about Real Tamilnadu Painters - Tamil Nadu's most trusted painting contractor founded by Rajesh. 5.0 Google Rating, 1000+ happy clients across Coimbatore, Chennai, Madurai." },
+      { name: "description", content: "Learn about Real Tamilnadu Painters - Tamil Nadu's most trusted painting contractor founded by Rajesh. 5.0 Google Rating, 999+ happy clients across Coimbatore, Chennai, Madurai." },
       { property: "og:title", content: "About Real Tamilnadu Painters" },
       { property: "og:description", content: "Tamil Nadu's most trusted painting contractors with 5.0 rating." },
     ],
@@ -24,7 +25,47 @@ const values = [
   { icon: CheckCircle, title: "Honest Pricing", desc: "Transparent pricing with no hidden costs. You get exactly what you pay for." },
 ];
 
+function CountUp({ target, suffix = "", decimals = 0, start }: { target: number; suffix?: string; decimals?: number; start: boolean }) {
+  const [value, setValue] = useState(0);
+  useEffect(() => {
+    if (!start) return;
+    const duration = 1500;
+    const startTime = performance.now();
+    let raf = 0;
+    const tick = (now: number) => {
+      const p = Math.min(1, (now - startTime) / duration);
+      const eased = 1 - Math.pow(1 - p, 3);
+      setValue(target * eased);
+      if (p < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [start, target]);
+  return <>{value.toFixed(decimals)}{suffix}</>;
+}
+
+function useInView<T extends HTMLElement>() {
+  const ref = useRef<T>(null);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    if (!ref.current || inView) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.3 },
+    );
+    obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, [inView]);
+  return { ref, inView };
+}
+
 function AboutPage() {
+  const { ref: statsRef, inView } = useInView<HTMLDivElement>();
   return (
     <>
       <section className="pt-32 pb-20 sm:pt-40 sm:pb-28 bg-secondary/50">
@@ -61,19 +102,25 @@ function AboutPage() {
                 Rajesh received the prestigious <strong className="text-foreground">Best Painting Contractor in Tamil Nadu</strong> award from Asian Paints — a testament to his exceptional craftsmanship and commitment to excellence.
               </p>
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Our commitment to using the best materials, employing skilled craftsmen, and maintaining transparent pricing has earned us a perfect 5.0 Google rating with 1000+ genuine reviews from happy customers across Tamil Nadu.
+                Our commitment to using the best materials, employing skilled craftsmen, and maintaining transparent pricing has earned us a perfect 5.0 Google rating with 999+ genuine reviews from happy customers across Tamil Nadu.
               </p>
-              <div className="grid grid-cols-3 gap-4">
+              <div ref={statsRef} className="grid grid-cols-3 gap-4">
                 <div className="text-center p-4 rounded-xl bg-secondary">
-                  <div className="text-2xl font-bold text-brand font-[var(--font-heading)]">1000+</div>
+                  <div className="text-2xl font-bold text-brand font-[var(--font-heading)]">
+                    <CountUp target={999} suffix="+" start={inView} />
+                  </div>
                   <div className="text-xs text-muted-foreground mt-1">Happy Clients</div>
                 </div>
                 <div className="text-center p-4 rounded-xl bg-secondary">
-                  <div className="text-2xl font-bold text-brand font-[var(--font-heading)]">5.0</div>
+                  <div className="text-2xl font-bold text-brand font-[var(--font-heading)]">
+                    <CountUp target={5} decimals={1} start={inView} />
+                  </div>
                   <div className="text-xs text-muted-foreground mt-1">Rating</div>
                 </div>
                 <div className="text-center p-4 rounded-xl bg-secondary">
-                <div className="text-2xl font-bold text-brand font-[var(--font-heading)]">1000+</div>
+                  <div className="text-2xl font-bold text-brand font-[var(--font-heading)]">
+                    <CountUp target={999} suffix="+" start={inView} />
+                  </div>
                   <div className="text-xs text-muted-foreground mt-1">Projects</div>
                 </div>
               </div>
