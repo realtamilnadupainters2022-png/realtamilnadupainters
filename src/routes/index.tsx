@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
+import { useEffect, useRef, useState } from "react";
 import { Star, Shield, Clock, Award, ChevronRight, Phone, Users, CheckCircle, Paintbrush, Home, Building2, Droplets } from "lucide-react";
 import heroImg from "@/assets/hero-bg.jpg";
 import founderImg from "@/assets/founder-rajesh.jpg";
@@ -31,12 +32,51 @@ export const Route = createFileRoute("/")({
 const WHATSAPP_URL = "https://wa.me/918680046800?text=Hi%20Real%20Tamilnadu%20Painters%2C%20I%27d%20like%20to%20get%20a%20free%20estimate%20for%20painting%20service%20for%20my%20property.%20Please%20tell%20me%20more%20about%20it.";
 
 const stats = [
-  { num: "1000+", label: "Happy Clients", icon: Users },
-  { num: "5.0", label: "Google Rating", icon: Star },
-  { num: "1000+", label: "Projects Done", icon: CheckCircle },
-  { num: "14+", label: "Years Experience", icon: Award },
-  { num: "25+", label: "Certified Painters", icon: Paintbrush },
+  { target: 999, suffix: "+", label: "Happy Clients", icon: Users },
+  { target: 5, suffix: "", decimals: 1, label: "Google Rating", icon: Star },
+  { target: 999, suffix: "+", label: "Projects Done", icon: CheckCircle },
+  { target: 14, suffix: "+", label: "Years Experience", icon: Award },
+  { target: 25, suffix: "+", label: "Certified Painters", icon: Paintbrush },
 ];
+
+function CountUp({ target, suffix = "", decimals = 0, start }: { target: number; suffix?: string; decimals?: number; start: boolean }) {
+  const [value, setValue] = useState(0);
+  useEffect(() => {
+    if (!start) return;
+    const duration = 1500;
+    const startTime = performance.now();
+    let raf = 0;
+    const tick = (now: number) => {
+      const p = Math.min(1, (now - startTime) / duration);
+      const eased = 1 - Math.pow(1 - p, 3);
+      setValue(target * eased);
+      if (p < 1) raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [start, target]);
+  return <>{value.toFixed(decimals)}{suffix}</>;
+}
+
+function useInView<T extends HTMLElement>() {
+  const ref = useRef<T>(null);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    if (!ref.current || inView) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.3 },
+    );
+    obs.observe(ref.current);
+    return () => obs.disconnect();
+  }, [inView]);
+  return { ref, inView };
+}
 
 const featuredServices = [
   { icon: Home, title: "Interior Painting", desc: "Premium interior painting with luxury finishes for homes and apartments across Tamil Nadu." },
