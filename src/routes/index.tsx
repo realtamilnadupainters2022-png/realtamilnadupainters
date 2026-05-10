@@ -126,17 +126,7 @@ function Index() {
       </section>
 
       {/* Stats */}
-      <section className="relative -mt-16 z-20 mx-auto max-w-5xl px-4" aria-label="Statistics">
-        <div className="glass-card rounded-2xl p-6 sm:p-8 grid grid-cols-2 md:grid-cols-5 gap-6 shadow-premium">
-          {stats.map((s) => (
-            <div key={s.label} className="text-center">
-              <s.icon className="w-8 h-8 mx-auto mb-2 text-brand" />
-              <div className="text-3xl sm:text-4xl font-bold text-foreground font-[var(--font-heading)]">{s.num}</div>
-              <div className="text-sm text-muted-foreground mt-1">{s.label}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <StatsSection />
 
       {/* Services Preview */}
       <section className="py-20 sm:py-28 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative" aria-label="Our Services">
