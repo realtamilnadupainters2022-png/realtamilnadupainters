@@ -78,6 +78,25 @@ function useInView<T extends HTMLElement>() {
   return { ref, inView };
 }
 
+function StatsSection() {
+  const { ref, inView } = useInView<HTMLDivElement>();
+  return (
+    <section className="relative -mt-16 z-20 mx-auto max-w-5xl px-4" aria-label="Statistics">
+      <div ref={ref} className="glass-card rounded-2xl p-6 sm:p-8 grid grid-cols-2 md:grid-cols-5 gap-6 shadow-premium">
+        {stats.map((s) => (
+          <div key={s.label} className="text-center">
+            <s.icon className="w-8 h-8 mx-auto mb-2 text-brand" />
+            <div className="text-3xl sm:text-4xl font-bold text-foreground font-[var(--font-heading)]">
+              <CountUp target={s.target} suffix={s.suffix} decimals={s.decimals ?? 0} start={inView} />
+            </div>
+            <div className="text-sm text-muted-foreground mt-1">{s.label}</div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 const featuredServices = [
   { icon: Home, title: "Interior Painting", desc: "Premium interior painting with luxury finishes for homes and apartments across Tamil Nadu." },
   { icon: Building2, title: "Exterior Painting", desc: "Weather-resistant exterior painting that protects and beautifies your property for years." },
