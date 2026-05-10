@@ -35,6 +35,7 @@ const stats = [
   { num: "5.0", label: "Google Rating", icon: Star },
   { num: "1000+", label: "Projects Done", icon: CheckCircle },
   { num: "14+", label: "Years Experience", icon: Award },
+  { num: "25+", label: "Certified Painters", icon: Paintbrush },
 ];
 
 const featuredServices = [
@@ -86,7 +87,7 @@ function Index() {
 
       {/* Stats */}
       <section className="relative -mt-16 z-20 mx-auto max-w-5xl px-4" aria-label="Statistics">
-        <div className="glass-card rounded-2xl p-6 sm:p-8 grid grid-cols-2 md:grid-cols-4 gap-6 shadow-premium">
+        <div className="glass-card rounded-2xl p-6 sm:p-8 grid grid-cols-2 md:grid-cols-5 gap-6 shadow-premium">
           {stats.map((s) => (
             <div key={s.label} className="text-center">
               <s.icon className="w-8 h-8 mx-auto mb-2 text-brand" />
