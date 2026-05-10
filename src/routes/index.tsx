@@ -32,9 +32,9 @@ export const Route = createFileRoute("/")({
 const WHATSAPP_URL = "https://wa.me/918680046800?text=Hi%20Real%20Tamilnadu%20Painters%2C%20I%27d%20like%20to%20get%20a%20free%20estimate%20for%20painting%20service%20for%20my%20property.%20Please%20tell%20me%20more%20about%20it.";
 
 const stats = [
-  { target: 999, suffix: "+", label: "Happy Clients", icon: Users },
+  { target: 1100, suffix: "+", label: "Happy Clients", icon: Users },
   { target: 5, suffix: "", decimals: 1, label: "Google Rating", icon: Star },
-  { target: 999, suffix: "+", label: "Projects Done", icon: CheckCircle },
+  { target: 1100, suffix: "+", label: "Projects Done", icon: CheckCircle },
   { target: 14, suffix: "+", label: "Years Experience", icon: Award },
   { target: 25, suffix: "+", label: "Certified Painters", icon: Paintbrush },
 ];

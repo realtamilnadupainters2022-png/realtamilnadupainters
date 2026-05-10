@@ -107,7 +107,7 @@ function AboutPage() {
               <div ref={statsRef} className="grid grid-cols-3 gap-4">
                 <div className="text-center p-4 rounded-xl bg-secondary">
                   <div className="text-2xl font-bold text-brand font-[var(--font-heading)]">
-                    <CountUp target={999} suffix="+" start={inView} />
+                    <CountUp target={1100} suffix="+" start={inView} />
                   </div>
                   <div className="text-xs text-muted-foreground mt-1">Happy Clients</div>
                 </div>
@@ -119,7 +119,7 @@ function AboutPage() {
                 </div>
                 <div className="text-center p-4 rounded-xl bg-secondary">
                   <div className="text-2xl font-bold text-brand font-[var(--font-heading)]">
-                    <CountUp target={999} suffix="+" start={inView} />
+                    <CountUp target={1100} suffix="+" start={inView} />
                   </div>
                   <div className="text-xs text-muted-foreground mt-1">Projects</div>
                 </div>
