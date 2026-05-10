@@ -129,7 +129,7 @@ function Index() {
               Contractors
             </h1>
             <p className="mt-6 text-lg text-[oklch(1_0_0_/_80%)] max-w-xl leading-relaxed">
-              Professional Interior & Exterior Painting Services with Luxury Finishing Across Tamil Nadu. Trusted by 999+ happy clients.
+              Professional Interior & Exterior Painting Services with Luxury Finishing Across Tamil Nadu. Trusted by 1100+ happy clients.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl px-8 py-4 text-base font-bold gradient-brand text-[oklch(1_0_0)] shadow-brand hover:opacity-90 transition-all hover:scale-105">
