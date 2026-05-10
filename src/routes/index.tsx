@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
       { title: "Real Tamilnadu Painters | #1 Best Painting Contractors in Coimbatore & Tamil Nadu" },
       { name: "description", content: "Real Tamilnadu Painters - Tamil Nadu's #1 premium painting contractors. Interior, exterior, texture & waterproof painting in Coimbatore, Chennai, Madurai. ⭐ 5.0 Rating. Call +91 86800 46800 for free estimate." },
       { property: "og:title", content: "Real Tamilnadu Painters | Best Painting Contractors in Tamil Nadu" },
-      { property: "og:description", content: "Professional painting services with luxury finishing. 999+ happy clients. Free estimates." },
+      { property: "og:description", content: "Professional painting services with luxury finishing. 1100+ happy clients. Free estimates." },
     ],
   }),
   component: Index,
@@ -121,7 +121,7 @@ function Index() {
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-6">
               <div className="flex">{[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-gold text-gold" />)}</div>
-              <span className="text-gold-light text-sm font-medium">5.0 Rating · 999+ Reviews</span>
+              <span className="text-gold-light text-sm font-medium">5.0 Rating · 1100+ Reviews</span>
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[oklch(1_0_0)] leading-tight font-[var(--font-heading)]">
               Tamil Nadu's Trusted{" "}
@@ -129,7 +129,7 @@ function Index() {
               Contractors
             </h1>
             <p className="mt-6 text-lg text-[oklch(1_0_0_/_80%)] max-w-xl leading-relaxed">
-              Professional Interior & Exterior Painting Services with Luxury Finishing Across Tamil Nadu. Trusted by 999+ happy clients.
+              Professional Interior & Exterior Painting Services with Luxury Finishing Across Tamil Nadu. Trusted by 1100+ happy clients.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-xl px-8 py-4 text-base font-bold gradient-brand text-[oklch(1_0_0)] shadow-brand hover:opacity-90 transition-all hover:scale-105">
