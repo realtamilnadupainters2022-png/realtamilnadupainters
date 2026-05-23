@@ -8,7 +8,11 @@ export const Route = createFileRoute("/services/house-painting")({
       { name: "description", content: "Professional house painting services in Coimbatore, Chennai, Madurai & across Tamil Nadu. Interior & exterior home painting with premium finishes. ⭐ 5.0 Rating. Call +91 86800 46800." },
       { property: "og:title", content: "House Painting Services - Real Tamilnadu Painters" },
       { property: "og:description", content: "Premium house painting services across Tamil Nadu with luxury finishing." },
+      { property: "og:url", content: "https://realtamilnadupainters.com/services/house-painting" },
     ],
+    links: [
+      { rel: "canonical", href: "https://realtamilnadupainters.com/services/house-painting" },
+        ],
     scripts: [
       {
         type: "application/ld+json",

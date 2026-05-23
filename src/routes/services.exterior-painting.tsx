@@ -8,7 +8,11 @@ export const Route = createFileRoute("/services/exterior-painting")({
       { name: "description", content: "Professional exterior painting services in Coimbatore, Chennai, Madurai. Weather-resistant coatings, UV protection & premium finishing. ⭐ 5.0 Rating. Call +91 86800 46800." },
       { property: "og:title", content: "Exterior Painting Services - Real Tamilnadu Painters" },
       { property: "og:description", content: "Weather-resistant exterior painting services across Tamil Nadu." },
+      { property: "og:url", content: "https://realtamilnadupainters.com/services/exterior-painting" },
     ],
+    links: [
+      { rel: "canonical", href: "https://realtamilnadupainters.com/services/exterior-painting" },
+        ],
     scripts: [
       {
         type: "application/ld+json",

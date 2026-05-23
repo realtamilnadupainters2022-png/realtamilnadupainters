@@ -8,7 +8,11 @@ export const Route = createFileRoute("/services/commercial-painting")({
       { name: "description", content: "Professional commercial painting for offices, shops, showrooms, factories & warehouses in Tamil Nadu. Minimal disruption, premium finish. Call +91 86800 46800." },
       { property: "og:title", content: "Commercial Painting Services - Real Tamilnadu Painters" },
       { property: "og:description", content: "Professional commercial and industrial painting services across Tamil Nadu." },
+      { property: "og:url", content: "https://realtamilnadupainters.com/services/commercial-painting" },
     ],
+    links: [
+      { rel: "canonical", href: "https://realtamilnadupainters.com/services/commercial-painting" },
+        ],
     scripts: [
       {
         type: "application/ld+json",

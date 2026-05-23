@@ -8,7 +8,11 @@ export const Route = createFileRoute("/services/waterproof-painting")({
       { name: "description", content: "Expert waterproof painting & coating services in Coimbatore, Chennai, Madurai. Stop leaks, dampness & seepage. Premium waterproofing solutions. Call +91 86800 46800." },
       { property: "og:title", content: "Waterproof Painting Services - Real Tamilnadu Painters" },
       { property: "og:description", content: "Professional waterproofing and damp-proofing painting services across Tamil Nadu." },
+      { property: "og:url", content: "https://realtamilnadupainters.com/services/waterproof-painting" },
     ],
+    links: [
+      { rel: "canonical", href: "https://realtamilnadupainters.com/services/waterproof-painting" },
+        ],
     scripts: [
       {
         type: "application/ld+json",

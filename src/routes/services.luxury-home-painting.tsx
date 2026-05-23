@@ -8,7 +8,11 @@ export const Route = createFileRoute("/services/luxury-home-painting")({
       { name: "description", content: "Premium luxury home painting services in Coimbatore, Chennai, Madurai. Italian stucco, metallic finishes, designer walls. Ultra-premium paints & expert craftsmen. Call +91 86800 46800." },
       { property: "og:title", content: "Luxury Home Painting - Real Tamilnadu Painters" },
       { property: "og:description", content: "Ultra-premium luxury home painting with designer finishes across Tamil Nadu." },
+      { property: "og:url", content: "https://realtamilnadupainters.com/services/luxury-home-painting" },
     ],
+    links: [
+      { rel: "canonical", href: "https://realtamilnadupainters.com/services/luxury-home-painting" },
+        ],
     scripts: [
       {
         type: "application/ld+json",
