@@ -5,10 +5,14 @@ import SectionHeading from "@/components/SectionHeading";
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: "Client Reviews | Real Tamilnadu Painters - 5.0 ⭐ Google Rating" },
-      { name: "description", content: "Read 41+ genuine Google reviews from happy clients of Real Tamilnadu Painters. 5.0 star rating for professional painting services in Coimbatore, Chennai, Tamil Nadu." },
-      { property: "og:title", content: "Client Reviews - Real Tamilnadu Painters" },
-      { property: "og:description", content: "5.0 Google Rating with 41+ genuine reviews." },
+      { title: "Client Reviews | Painting Contractor in Coimbatore - Real Tamilnadu Painters" },
+      { name: "description", content: "Read 41+ genuine Google reviews of Real Tamilnadu Painters, a 5.0-rated painting contractor in Coimbatore serving clients across Chennai, Madurai and Tamil Nadu." },
+      { property: "og:title", content: "Client Reviews | Real Tamilnadu Painters Coimbatore" },
+      { property: "og:description", content: "5.0 Google Rating with 41+ genuine reviews from house painting clients in Coimbatore and Tamil Nadu." },
+      { property: "og:url", content: "https://realtamilnadupainters.com/reviews" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://realtamilnadupainters.com/reviews" },
     ],
   }),
   component: ReviewsPage,

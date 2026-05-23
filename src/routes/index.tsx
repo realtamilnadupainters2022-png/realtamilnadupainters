@@ -20,10 +20,14 @@ import SectionHeading from "@/components/SectionHeading";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Real Tamilnadu Painters | #1 Best Painting Contractors in Coimbatore & Tamil Nadu" },
-      { name: "description", content: "Real Tamilnadu Painters - Tamil Nadu's #1 premium painting contractors. Interior, exterior, texture & waterproof painting in Coimbatore, Chennai, Madurai. ⭐ 5.0 Rating. Call +91 86800 46800 for free estimate." },
-      { property: "og:title", content: "Real Tamilnadu Painters | Best Painting Contractors in Tamil Nadu" },
-      { property: "og:description", content: "Professional painting services with luxury finishing. 999+ happy clients. Free estimates." },
+      { title: "Painting Contractor in Coimbatore | Real Tamilnadu Painters" },
+      { name: "description", content: "Looking for a painting contractor in Coimbatore? Real Tamilnadu Painters offers house painters, interior & exterior painting, waterproofing and commercial painting across Tamil Nadu. ⭐ 5.0 rating. Call +91 86800 46800." },
+      { property: "og:title", content: "Painting Contractor in Coimbatore | Real Tamilnadu Painters" },
+      { property: "og:description", content: "House painters, interior, exterior, waterproofing & commercial painting in Coimbatore and across Tamil Nadu. 1100+ happy clients." },
+      { property: "og:url", content: "https://realtamilnadupainters.com/" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://realtamilnadupainters.com/" },
     ],
   }),
   component: Index,
