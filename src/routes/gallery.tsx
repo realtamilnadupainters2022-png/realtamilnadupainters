@@ -13,10 +13,14 @@ import project9 from "@/assets/project-9.jpg";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Our Projects Gallery | Real Tamilnadu Painters - Premium Painting Work" },
-      { name: "description", content: "View our premium painting projects gallery - Interior, exterior, texture, and commercial painting work across Coimbatore, Chennai, Madurai, Tamil Nadu." },
-      { property: "og:title", content: "Project Gallery - Real Tamilnadu Painters" },
-      { property: "og:description", content: "Premium painting projects across Tamil Nadu." },
+      { title: "Painting Project Gallery in Coimbatore | Real Tamilnadu Painters" },
+      { name: "description", content: "Browse interior, exterior, texture and commercial painting projects completed by Real Tamilnadu Painters across Coimbatore, Chennai, Madurai and Tamil Nadu." },
+      { property: "og:title", content: "Painting Project Gallery | Coimbatore - Real Tamilnadu Painters" },
+      { property: "og:description", content: "Interior, exterior and commercial painting projects across Coimbatore and Tamil Nadu." },
+      { property: "og:url", content: "https://realtamilnadupainters.com/gallery" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://realtamilnadupainters.com/gallery" },
     ],
   }),
   component: GalleryPage,

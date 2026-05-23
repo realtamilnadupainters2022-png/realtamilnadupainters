@@ -7,10 +7,14 @@ const WHATSAPP_URL = "https://wa.me/918680046800?text=Hi%20Real%20Tamilnadu%20Pa
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Real Tamilnadu Painters | Free Painting Estimate Coimbatore" },
-      { name: "description", content: "Contact Real Tamilnadu Painters for free painting estimates. Call +91 86800 46800 or WhatsApp us. Located at Chinnavedampatti, Coimbatore, Tamil Nadu 641049." },
-      { property: "og:title", content: "Contact Us - Real Tamilnadu Painters" },
-      { property: "og:description", content: "Get a free painting estimate. Call or WhatsApp +91 86800 46800." },
+      { title: "Contact Painting Contractor in Coimbatore | Free Estimate - Real Tamilnadu Painters" },
+      { name: "description", content: "Contact Coimbatore's top painting contractor for a free estimate. Call or WhatsApp +91 86800 46800. Office: Chinnavedampatti, Coimbatore, Tamil Nadu 641049." },
+      { property: "og:title", content: "Contact Real Tamilnadu Painters | Coimbatore" },
+      { property: "og:description", content: "Free painting estimate in Coimbatore. Call or WhatsApp +91 86800 46800." },
+      { property: "og:url", content: "https://realtamilnadupainters.com/contact" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://realtamilnadupainters.com/contact" },
     ],
   }),
   component: ContactPage,

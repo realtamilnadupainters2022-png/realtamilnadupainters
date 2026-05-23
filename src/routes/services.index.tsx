@@ -8,10 +8,14 @@ const WHATSAPP_URL = "https://wa.me/918680046800?text=Hi%20Real%20Tamilnadu%20Pa
 export const Route = createFileRoute("/services/")({
   head: () => ({
     meta: [
-      { title: "Painting Services in Tamil Nadu | Interior, Exterior, Texture, Waterproof Painting" },
-      { name: "description", content: "Complete painting services by Real Tamilnadu Painters - Interior, Exterior, Texture, Waterproof, Wood Polish, Commercial painting in Coimbatore, Chennai, Madurai. Call +91 86800 46800." },
-      { property: "og:title", content: "Professional Painting Services in Tamil Nadu" },
-      { property: "og:description", content: "Interior, exterior, texture, waterproof and commercial painting services." },
+      { title: "Painting Services in Coimbatore | Interior, Exterior & Waterproofing - Real Tamilnadu Painters" },
+      { name: "description", content: "Interior painting services, exterior painting services, waterproofing and commercial painting in Coimbatore by Real Tamilnadu Painters. Serving Chennai, Madurai and all of Tamil Nadu. Call +91 86800 46800." },
+      { property: "og:title", content: "Painting Services in Coimbatore | Real Tamilnadu Painters" },
+      { property: "og:description", content: "Interior, exterior, texture, waterproofing and commercial painting services in Coimbatore and Tamil Nadu." },
+      { property: "og:url", content: "https://realtamilnadupainters.com/services" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://realtamilnadupainters.com/services" },
     ],
   }),
   component: ServicesIndexPage,
