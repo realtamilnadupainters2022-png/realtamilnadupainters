@@ -9,6 +9,9 @@ import project6 from "@/assets/project-6.jpg";
 import project7 from "@/assets/project-7.jpg";
 import project8 from "@/assets/project-8.jpg";
 import project9 from "@/assets/project-9.jpg";
+import project10 from "@/assets/project-10.jpg";
+import project11 from "@/assets/project-11.jpg";
+import project12 from "@/assets/project-12.jpg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -27,6 +30,9 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const projects = [
+  { img: project12, title: "Modern Two-Storey Home Exterior", loc: "Coimbatore", cat: "Exterior Painting" },
+  { img: project11, title: "Apartment Building Exterior Repaint", loc: "Coimbatore", cat: "Commercial Painting" },
+  { img: project10, title: "Navy & White Villa Exterior", loc: "Coimbatore", cat: "Exterior Painting" },
   { img: project1, title: "Modern Elevation Exterior", loc: "Coimbatore", cat: "Exterior Painting" },
   { img: project2, title: "Premium Interior Texture", loc: "Coimbatore", cat: "Interior Painting" },
   { img: project3, title: "Blue & White Exterior", loc: "Tamil Nadu", cat: "Exterior Painting" },

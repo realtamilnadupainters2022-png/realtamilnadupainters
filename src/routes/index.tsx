@@ -13,6 +13,9 @@ import project6 from "@/assets/project-6.jpg";
 import project7 from "@/assets/project-7.jpg";
 import project8 from "@/assets/project-8.jpg";
 import project9 from "@/assets/project-9.jpg";
+import project10 from "@/assets/project-10.jpg";
+import project11 from "@/assets/project-11.jpg";
+import project12 from "@/assets/project-12.jpg";
 import logoImg from "@/assets/logo.png";
 import brandIdentityImg from "@/assets/brand-identity.png";
 import SectionHeading from "@/components/SectionHeading";
@@ -269,6 +272,9 @@ function Index() {
         <div className="overflow-x-auto pb-4 -mx-4 px-4 sm:mx-0 sm:px-0 scroll-smooth">
           <div className="grid grid-rows-2 grid-flow-col auto-cols-[85%] sm:auto-cols-[45%] md:auto-cols-[32%] gap-6">
           {[
+            { img: project12, title: "Modern Two-Storey Home Exterior", loc: "Coimbatore" },
+            { img: project11, title: "Apartment Building Exterior Repaint", loc: "Coimbatore" },
+            { img: project10, title: "Navy & White Villa Exterior", loc: "Coimbatore" },
             { img: project1, title: "Modern Elevation Exterior", loc: "Coimbatore" },
             { img: project2, title: "Premium Interior Texture", loc: "Coimbatore" },
             { img: project3, title: "Blue & White Exterior", loc: "Tamil Nadu" },
