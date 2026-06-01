@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { Star, Shield, Clock, Award, ChevronRight, Phone, Users, CheckCircle, Paintbrush, Home, Building2, Droplets } from "lucide-react";
+import { Star, Shield, Clock, Award, ChevronRight, Phone, Users, CheckCircle, Paintbrush, Home, Building2, Droplets, Calendar } from "lucide-react";
 import heroImg from "@/assets/hero-bg.jpg";
 import founderImg from "@/assets/founder-rajesh.jpg";
 import project1 from "@/assets/project-1.jpg";
@@ -344,6 +344,38 @@ function Index() {
               <Phone className="w-5 h-5" /> Call Now
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Blog Preview */}
+      <section className="py-20 sm:py-28 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Latest Blog">
+        <SectionHeading badge="Blog" title="Painting Tips & Guides" subtitle="Expert advice from Coimbatore's trusted painting contractors to help you make the best decisions for your home." />
+        <div className="max-w-3xl mx-auto">
+          <Link
+            to="/blog/$slug"
+            params={{ slug: "choose-painting-contractor-coimbatore" }}
+            className="group block rounded-2xl overflow-hidden shadow-premium hover-lift bg-card"
+          >
+            <div className="aspect-[16/9] overflow-hidden">
+              <img src={project10} alt="Freshly painted navy and white villa exterior by Real Tamilnadu Painters in Coimbatore" className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" loading="lazy" width={800} height={450} />
+            </div>
+            <div className="p-6 sm:p-8">
+              <div className="flex items-center gap-2 text-xs text-muted-foreground mb-3">
+                <Calendar className="w-4 h-4" />
+                <span>May 28, 2026</span>
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-foreground font-[var(--font-heading)] mb-3 group-hover:text-brand transition-colors">How to Choose the Best Painting Contractor in Coimbatore (2026 Guide)</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">A practical checklist for homeowners hiring a painting contractor in Coimbatore — what to ask, what to compare and how to avoid costly mistakes.</p>
+              <span className="inline-flex items-center gap-1 text-brand text-sm font-semibold group-hover:gap-2 transition-all">
+                Read article <ChevronRight className="w-4 h-4" />
+              </span>
+            </div>
+          </Link>
+        </div>
+        <div className="text-center mt-10">
+          <Link to="/blog" className="inline-flex items-center gap-2 text-brand font-semibold hover:gap-3 transition-all">
+            View All Articles <ChevronRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
 
