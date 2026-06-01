@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { useEffect, useRef, useState } from "react";
-import { Star, Shield, Clock, Award, ChevronRight, Phone, Users, CheckCircle, Paintbrush, Home, Building2, Droplets } from "lucide-react";
+import { Star, Shield, Clock, Award, ChevronRight, Phone, Users, CheckCircle, Paintbrush, Home, Building2, Droplets, Calendar } from "lucide-react";
 import heroImg from "@/assets/hero-bg.jpg";
 import founderImg from "@/assets/founder-rajesh.jpg";
 import project1 from "@/assets/project-1.jpg";
