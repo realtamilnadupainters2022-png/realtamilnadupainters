@@ -13,14 +13,17 @@ import { Route as ServicesRouteImport } from './routes/services'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as ContactRouteImport } from './routes/contact'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as ServicesIndexRouteImport } from './routes/services.index'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
 import { Route as ServicesWaterproofPaintingRouteImport } from './routes/services.waterproof-painting'
 import { Route as ServicesLuxuryHomePaintingRouteImport } from './routes/services.luxury-home-painting'
 import { Route as ServicesHousePaintingRouteImport } from './routes/services.house-painting'
 import { Route as ServicesExteriorPaintingRouteImport } from './routes/services.exterior-painting'
 import { Route as ServicesCommercialPaintingRouteImport } from './routes/services.commercial-painting'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
@@ -42,6 +45,11 @@ const ContactRoute = ContactRouteImport.update({
   path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
@@ -56,6 +64,11 @@ const ServicesIndexRoute = ServicesIndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => ServicesRoute,
+} as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => BlogRoute,
 } as any)
 const ServicesWaterproofPaintingRoute =
   ServicesWaterproofPaintingRouteImport.update({
@@ -86,19 +99,27 @@ const ServicesCommercialPaintingRoute =
     path: '/commercial-painting',
     getParentRoute: () => ServicesRoute,
   } as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => BlogRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRouteWithChildren
+  '/blog/$slug': typeof BlogSlugRoute
   '/services/commercial-painting': typeof ServicesCommercialPaintingRoute
   '/services/exterior-painting': typeof ServicesExteriorPaintingRoute
   '/services/house-painting': typeof ServicesHousePaintingRoute
   '/services/luxury-home-painting': typeof ServicesLuxuryHomePaintingRoute
   '/services/waterproof-painting': typeof ServicesWaterproofPaintingRoute
+  '/blog/': typeof BlogIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRoutesByTo {
@@ -107,26 +128,31 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/reviews': typeof ReviewsRoute
+  '/blog/$slug': typeof BlogSlugRoute
   '/services/commercial-painting': typeof ServicesCommercialPaintingRoute
   '/services/exterior-painting': typeof ServicesExteriorPaintingRoute
   '/services/house-painting': typeof ServicesHousePaintingRoute
   '/services/luxury-home-painting': typeof ServicesLuxuryHomePaintingRoute
   '/services/waterproof-painting': typeof ServicesWaterproofPaintingRoute
+  '/blog': typeof BlogIndexRoute
   '/services': typeof ServicesIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/blog': typeof BlogRouteWithChildren
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
   '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRouteWithChildren
+  '/blog/$slug': typeof BlogSlugRoute
   '/services/commercial-painting': typeof ServicesCommercialPaintingRoute
   '/services/exterior-painting': typeof ServicesExteriorPaintingRoute
   '/services/house-painting': typeof ServicesHousePaintingRoute
   '/services/luxury-home-painting': typeof ServicesLuxuryHomePaintingRoute
   '/services/waterproof-painting': typeof ServicesWaterproofPaintingRoute
+  '/blog/': typeof BlogIndexRoute
   '/services/': typeof ServicesIndexRoute
 }
 export interface FileRouteTypes {
@@ -134,15 +160,18 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/about'
+    | '/blog'
     | '/contact'
     | '/gallery'
     | '/reviews'
     | '/services'
+    | '/blog/$slug'
     | '/services/commercial-painting'
     | '/services/exterior-painting'
     | '/services/house-painting'
     | '/services/luxury-home-painting'
     | '/services/waterproof-painting'
+    | '/blog/'
     | '/services/'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -151,31 +180,37 @@ export interface FileRouteTypes {
     | '/contact'
     | '/gallery'
     | '/reviews'
+    | '/blog/$slug'
     | '/services/commercial-painting'
     | '/services/exterior-painting'
     | '/services/house-painting'
     | '/services/luxury-home-painting'
     | '/services/waterproof-painting'
+    | '/blog'
     | '/services'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/blog'
     | '/contact'
     | '/gallery'
     | '/reviews'
     | '/services'
+    | '/blog/$slug'
     | '/services/commercial-painting'
     | '/services/exterior-painting'
     | '/services/house-painting'
     | '/services/luxury-home-painting'
     | '/services/waterproof-painting'
+    | '/blog/'
     | '/services/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  BlogRoute: typeof BlogRouteWithChildren
   ContactRoute: typeof ContactRoute
   GalleryRoute: typeof GalleryRoute
   ReviewsRoute: typeof ReviewsRoute
@@ -212,6 +247,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/about': {
       id: '/about'
       path: '/about'
@@ -232,6 +274,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/services/'
       preLoaderRoute: typeof ServicesIndexRouteImport
       parentRoute: typeof ServicesRoute
+    }
+    '/blog/': {
+      id: '/blog/'
+      path: '/'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof BlogRoute
     }
     '/services/waterproof-painting': {
       id: '/services/waterproof-painting'
@@ -268,8 +317,27 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesCommercialPaintingRouteImport
       parentRoute: typeof ServicesRoute
     }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof BlogRoute
+    }
   }
 }
+
+interface BlogRouteChildren {
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
+}
+
+const BlogRouteChildren: BlogRouteChildren = {
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
+}
+
+const BlogRouteWithChildren = BlogRoute._addFileChildren(BlogRouteChildren)
 
 interface ServicesRouteChildren {
   ServicesCommercialPaintingRoute: typeof ServicesCommercialPaintingRoute
@@ -296,6 +364,7 @@ const ServicesRouteWithChildren = ServicesRoute._addFileChildren(
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  BlogRoute: BlogRouteWithChildren,
   ContactRoute: ContactRoute,
   GalleryRoute: GalleryRoute,
   ReviewsRoute: ReviewsRoute,
@@ -304,3 +373,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
