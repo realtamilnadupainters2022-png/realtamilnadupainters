@@ -14,6 +14,36 @@ export const Route = createFileRoute("/reviews")({
     links: [
       { rel: "canonical", href: "https://realtamilnadupainters.com/reviews" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "Real Tamilnadu Painters",
+          url: "https://realtamilnadupainters.com",
+          telephone: "+918680046800",
+          address: {
+            "@type": "PostalAddress",
+            addressLocality: "Coimbatore",
+            addressRegion: "Tamil Nadu",
+            addressCountry: "IN",
+          },
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: "5.0",
+            reviewCount: "41",
+            bestRating: "5",
+            worstRating: "1",
+          },
+          review: [
+            { "@type": "Review", author: { "@type": "Person", name: "Suresh K." }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }, reviewBody: "Excellent work by Real Tamilnadu Painters! Painted our 3BHK apartment with premium finish. Highly recommended painters in Coimbatore." },
+            { "@type": "Review", author: { "@type": "Person", name: "Priya M." }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }, reviewBody: "Hired them for villa exterior painting. Professional, on time, and quality exceeded expectations. Best painting contractors in Tamil Nadu." },
+            { "@type": "Review", author: { "@type": "Person", name: "Revathi G." }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" }, reviewBody: "Our Coimbatore apartment looks brand new. Helpful color consultation, on-time completion, zero hassle." },
+          ],
+        }),
+      },
+    ],
   }),
   component: ReviewsPage,
 });

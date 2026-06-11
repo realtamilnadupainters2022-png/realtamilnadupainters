@@ -17,6 +17,45 @@ export const Route = createFileRoute("/services/")({
     links: [
       { rel: "canonical", href: "https://realtamilnadupainters.com/services" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          serviceType: "Painting Contractor Services",
+          provider: {
+            "@type": "LocalBusiness",
+            name: "Real Tamilnadu Painters",
+            telephone: "+918680046800",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Coimbatore",
+              addressRegion: "Tamil Nadu",
+              addressCountry: "IN",
+            },
+          },
+          areaServed: [
+            { "@type": "City", name: "Coimbatore" },
+            { "@type": "City", name: "Chennai" },
+            { "@type": "City", name: "Madurai" },
+            { "@type": "State", name: "Tamil Nadu" },
+          ],
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: "Painting Services in Coimbatore",
+            itemListElement: [
+              { "@type": "Offer", itemOffered: { "@type": "Service", name: "House Painters in Coimbatore", url: "https://realtamilnadupainters.com/services/house-painting" } },
+              { "@type": "Offer", itemOffered: { "@type": "Service", name: "Interior Painters Coimbatore", url: "https://realtamilnadupainters.com/services/house-painting" } },
+              { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Painters Coimbatore", url: "https://realtamilnadupainters.com/services/exterior-painting" } },
+              { "@type": "Offer", itemOffered: { "@type": "Service", name: "Waterproofing Services Coimbatore", url: "https://realtamilnadupainters.com/services/waterproof-painting" } },
+              { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial Painting Contractors Coimbatore", url: "https://realtamilnadupainters.com/services/commercial-painting" } },
+              { "@type": "Offer", itemOffered: { "@type": "Service", name: "Luxury Home Painting Coimbatore", url: "https://realtamilnadupainters.com/services/luxury-home-painting" } },
+            ],
+          },
+        }),
+      },
+    ],
   }),
   component: ServicesIndexPage,
 });

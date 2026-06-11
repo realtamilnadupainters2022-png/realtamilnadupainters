@@ -16,6 +16,37 @@ export const Route = createFileRoute("/contact")({
     links: [
       { rel: "canonical", href: "https://realtamilnadupainters.com/contact" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Contact Real Tamilnadu Painters - Painting Contractor in Coimbatore",
+          url: "https://realtamilnadupainters.com/contact",
+          mainEntity: {
+            "@type": "LocalBusiness",
+            name: "Real Tamilnadu Painters",
+            telephone: "+918680046800",
+            email: "realtamilnadupainters2022@gmail.com",
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "10 Sindhu Nagar, Anjugam Nagar, Chinnavedampatti",
+              addressLocality: "Coimbatore",
+              addressRegion: "Tamil Nadu",
+              postalCode: "641049",
+              addressCountry: "IN",
+            },
+            openingHoursSpecification: {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+              opens: "08:00",
+              closes: "20:00",
+            },
+          },
+        }),
+      },
+    ],
   }),
   component: ContactPage,
 });

@@ -32,6 +32,38 @@ export const Route = createFileRoute("/")({
     links: [
       { rel: "canonical", href: "https://realtamilnadupainters.com/" },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: [
+            { "@type": "Question", name: "What areas do Real Tamilnadu Painters serve?", acceptedAnswer: { "@type": "Answer", text: "We serve all major cities in Tamil Nadu including Coimbatore, Chennai, Madurai, Trichy, Salem, Erode, Tiruppur, and nearby states like Kerala, Karnataka, Andhra Pradesh and Puducherry." } },
+            { "@type": "Question", name: "How much do painting services cost in Coimbatore?", acceptedAnswer: { "@type": "Answer", text: "Painting services in Coimbatore typically range from ₹12 to ₹35 per sq ft depending on paint quality, surface condition and scope. Real Tamilnadu Painters provides free on-site estimates." } },
+            { "@type": "Question", name: "Do you provide waterproof painting services in Coimbatore?", acceptedAnswer: { "@type": "Answer", text: "Yes, we are expert waterproofing contractors in Coimbatore offering terrace, wall and bathroom waterproofing using premium coatings." } },
+            { "@type": "Question", name: "Who are the best house painters in Coimbatore?", acceptedAnswer: { "@type": "Answer", text: "Real Tamilnadu Painters is rated 5.0 on Google and has completed 1100+ projects, making us one of the most trusted house painters in Coimbatore." } },
+            { "@type": "Question", name: "Do you offer interior and exterior painting in Coimbatore?", acceptedAnswer: { "@type": "Answer", text: "Yes, we offer complete interior and exterior painting in Coimbatore including texture, luxury finishes, wood polish, metal painting and commercial painting." } },
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Painting Services in Coimbatore",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, url: "https://realtamilnadupainters.com/services/house-painting", name: "House Painters in Coimbatore" },
+            { "@type": "ListItem", position: 2, url: "https://realtamilnadupainters.com/services/interior-painting", name: "Interior Painters Coimbatore" },
+            { "@type": "ListItem", position: 3, url: "https://realtamilnadupainters.com/services/exterior-painting", name: "Exterior Painters Coimbatore" },
+            { "@type": "ListItem", position: 4, url: "https://realtamilnadupainters.com/services/waterproof-painting", name: "Waterproofing Services Coimbatore" },
+            { "@type": "ListItem", position: 5, url: "https://realtamilnadupainters.com/services/commercial-painting", name: "Commercial Painting Contractors Coimbatore" },
+            { "@type": "ListItem", position: 6, url: "https://realtamilnadupainters.com/services/luxury-home-painting", name: "Luxury Home Painting Coimbatore" },
+          ],
+        }),
+      },
+    ],
   }),
   component: Index,
 });
