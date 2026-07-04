@@ -3,6 +3,7 @@ import { ChevronRight, Calendar } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import project10 from "@/assets/project-10.jpg";
+import project13 from "@/assets/project-13.jpg";
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({
@@ -21,6 +22,14 @@ export const Route = createFileRoute("/blog/")({
 });
 
 const posts = [
+  {
+    slug: "best-exterior-paint-coimbatore-weather",
+    title: "Best Exterior Paint for Coimbatore Weather (2026 Homeowner's Guide)",
+    excerpt: "Coimbatore's sun, monsoon and humidity punish exterior walls. Here's how to pick a weather-proof exterior paint that lasts 7+ years — from a local painting contractor.",
+    date: "June 12, 2026",
+    img: project13,
+    alt: "Contemporary grey duplex exterior painted by Real Tamilnadu Painters in Chinnavedampatti, Coimbatore",
+  },
   {
     slug: "choose-painting-contractor-coimbatore",
     title: "How to Choose the Best Painting Contractor in Coimbatore (2026 Guide)",
