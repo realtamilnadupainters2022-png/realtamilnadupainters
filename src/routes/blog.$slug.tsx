@@ -200,3 +200,131 @@ function BlogPost() {
     </>
   );
 }
+
+function ExteriorPaintBody() {
+  return (
+    <>
+      <p className="text-lg text-muted-foreground leading-relaxed">
+        Coimbatore's weather is beautiful — and brutal on paint. Peak summer touches 40°C with harsh UV, the southwest monsoon dumps wind-driven rain against west-facing walls, and coastal humidity creeps up walls that were never sealed properly. If you're planning to repaint your home or commercial building this year, choosing the right exterior paint matters more than the colour itself. This 2026 guide, written by a working <Link to="/services" className="text-brand font-semibold hover:underline">painting contractor in Coimbatore</Link>, walks you through exactly what to buy, what to avoid and how to make an exterior paint job last 7+ years.
+      </p>
+
+      <h2 className="text-2xl sm:text-3xl font-bold text-foreground font-[var(--font-heading)] mt-10 mb-4">Why Coimbatore Weather Is Tough on Exterior Paint</h2>
+      <p className="text-muted-foreground leading-relaxed">
+        Three local factors decide how long an exterior paint lasts in Coimbatore:
+      </p>
+      <ul className="list-disc pl-6 space-y-2 text-muted-foreground leading-relaxed">
+        <li><strong>UV radiation</strong> — 8–10 months of strong sunlight fade cheap emulsions within 2 years.</li>
+        <li><strong>Monsoon and wind-driven rain</strong> — moisture pushes into micro-cracks and lifts the paint film from behind.</li>
+        <li><strong>Thermal expansion</strong> — day/night temperature swings crack rigid coatings, especially over new plaster.</li>
+      </ul>
+      <p className="text-muted-foreground leading-relaxed">
+        A paint that "looks the same" in the shop can behave completely differently on a west-facing wall in Peelamedu after one monsoon. That's why paint selection has to be matched to your wall's orientation, age and substrate — something a local <Link to="/services/exterior-painting" className="text-brand font-semibold hover:underline">exterior painting contractor</Link> does on every site visit.
+      </p>
+
+      <h2 className="text-2xl sm:text-3xl font-bold text-foreground font-[var(--font-heading)] mt-10 mb-4">What to Look for in an Exterior Paint (2026 Checklist)</h2>
+
+      <h3 className="text-xl font-bold text-foreground font-[var(--font-heading)] mt-6 mb-2">1. 100% Acrylic Emulsion Base</h3>
+      <p className="text-muted-foreground leading-relaxed">
+        Skip cement-based distempers and cheap "exterior emulsions" that are actually interior formulas re-branded. A true 100% acrylic exterior emulsion flexes with the wall, resists UV and stays breathable so trapped moisture can escape.
+      </p>
+
+      <h3 className="text-xl font-bold text-foreground font-[var(--font-heading)] mt-6 mb-2">2. UV & Weather Warranty (5–10 Years)</h3>
+      <p className="text-muted-foreground leading-relaxed">
+        Trusted brands print a written warranty on the tin — Asian Paints Apex Ultima, Berger WeatherCoat All Guard, Dulux Weathershield Max and Nerolac Excel Total all offer 5–10 year performance warranties. If the paint you're being quoted has no written warranty, that's a red flag.
+      </p>
+
+      <h3 className="text-xl font-bold text-foreground font-[var(--font-heading)] mt-6 mb-2">3. Dirt Pick-Up Resistance</h3>
+      <p className="text-muted-foreground leading-relaxed">
+        Coimbatore has heavy vehicular dust from Avinashi Road, Trichy Road and the industrial belts. Look for paints marketed as "self-cleaning" or "dirt guard" — their smoother film sheds dust with every rain instead of collecting streaks.
+      </p>
+
+      <h3 className="text-xl font-bold text-foreground font-[var(--font-heading)] mt-6 mb-2">4. Algae and Fungus Protection</h3>
+      <p className="text-muted-foreground leading-relaxed">
+        Any wall that stays shaded — north-facing, behind a compound wall, near trees — will grow black algae in Coimbatore's monsoon. Choose a paint with built-in anti-algal/anti-fungal additives. It saves an ugly re-clean job 18 months later.
+      </p>
+
+      <h3 className="text-xl font-bold text-foreground font-[var(--font-heading)] mt-6 mb-2">5. Elastomeric / Crack-Bridging Ability</h3>
+      <p className="text-muted-foreground leading-relaxed">
+        For older homes with hairline cracks, an elastomeric top coat (or a crack-bridging primer + premium emulsion) stretches over movement instead of splitting. This alone can add 3–4 years to your paint life.
+      </p>
+
+      <h2 className="text-2xl sm:text-3xl font-bold text-foreground font-[var(--font-heading)] mt-10 mb-4">Best Exterior Paints for Coimbatore (2026)</h2>
+      <p className="text-muted-foreground leading-relaxed">
+        Based on hundreds of exterior projects we've completed across Coimbatore, Tiruppur, Erode and Salem, these are the exterior paint systems that consistently perform:
+      </p>
+      <ul className="list-disc pl-6 space-y-2 text-muted-foreground leading-relaxed">
+        <li><strong>Premium tier (7–10 yr life):</strong> Asian Paints Apex Ultima Protek, Berger WeatherCoat All Guard, Dulux Weathershield Max.</li>
+        <li><strong>Mid tier (5–7 yr life):</strong> Asian Paints Apex, Berger WeatherCoat Long Life, Nerolac Excel Total.</li>
+        <li><strong>Budget tier (3–5 yr life):</strong> Asian Paints Ace, Berger Bison Acrylic Exterior. Fine for compound walls and rental properties.</li>
+      </ul>
+      <p className="text-muted-foreground leading-relaxed">
+        Any of these applied over the wrong prep work will still fail. Paint quality is only 40% of the result — surface preparation is the other 60%.
+      </p>
+
+      <h2 className="text-2xl sm:text-3xl font-bold text-foreground font-[var(--font-heading)] mt-10 mb-4">Surface Preparation Steps That Actually Matter</h2>
+      <ol className="list-decimal pl-6 space-y-2 text-muted-foreground leading-relaxed">
+        <li><strong>Power wash</strong> the wall to remove dust, chalking and algae. Never paint over old flaking paint.</li>
+        <li><strong>Scrape and sand</strong> all loose paint back to a sound edge — don't just paint over it.</li>
+        <li><strong>Repair cracks</strong> with acrylic wall putty or a flexible sealant for structural cracks.</li>
+        <li><strong>Apply an exterior primer</strong> — a proper alkali-resistant primer is non-negotiable on new plaster or repaired areas.</li>
+        <li><strong>Two full top coats</strong> of exterior emulsion, with correct thinning ratio and drying time between coats.</li>
+        <li><strong>Waterproof problem zones</strong> — parapet walls, sunshades, terrace-wall junctions — with a proper <Link to="/services/waterproof-painting" className="text-brand font-semibold hover:underline">waterproofing coat</Link> before the finish paint.</li>
+      </ol>
+
+      <h2 className="text-2xl sm:text-3xl font-bold text-foreground font-[var(--font-heading)] mt-10 mb-4">How Much Does Exterior Painting Cost in Coimbatore (2026)?</h2>
+      <p className="text-muted-foreground leading-relaxed">
+        For a labour + material contract in Coimbatore, current market rates are approximately:
+      </p>
+      <ul className="list-disc pl-6 space-y-2 text-muted-foreground leading-relaxed">
+        <li>Budget acrylic exterior — ₹15–₹22 per sq ft</li>
+        <li>Mid-range weatherproof emulsion — ₹22–₹32 per sq ft</li>
+        <li>Premium 7–10 year warranty system — ₹32–₹45 per sq ft</li>
+        <li>Textured / stone finish exterior — ₹45–₹80 per sq ft</li>
+      </ul>
+      <p className="text-muted-foreground leading-relaxed">
+        These are painted-area rates, not carpet area. A typical 1,500 sq ft independent house has about 3,000–3,500 sq ft of paintable exterior. For a transparent, itemised quote for your property, see our <Link to="/services/exterior-painting" className="text-brand font-semibold hover:underline">exterior painting service page</Link> or send photos on WhatsApp.
+      </p>
+
+      <h2 className="text-2xl sm:text-3xl font-bold text-foreground font-[var(--font-heading)] mt-10 mb-4">Best Time to Paint Exterior Walls in Coimbatore</h2>
+      <p className="text-muted-foreground leading-relaxed">
+        The ideal painting windows in Coimbatore are <strong>January to April</strong> and <strong>mid-August to early October</strong>, when humidity is moderate and rainfall is low. Avoid painting during the northeast monsoon (October–December) — even one shower within 4 hours of top-coating can ruin the finish. If your project must happen in monsoon, an experienced local team will schedule shaded elevations, tent the working face, and stop work at the first sign of rain.
+      </p>
+
+      <h2 className="text-2xl sm:text-3xl font-bold text-foreground font-[var(--font-heading)] mt-10 mb-4">Common Mistakes Homeowners Make</h2>
+      <ul className="list-disc pl-6 space-y-2 text-muted-foreground leading-relaxed">
+        <li>Choosing paint by colour first, brand tier second. Colour is easy to change; a bad paint tier means a repaint in 2 years.</li>
+        <li>Skipping primer to save ₹8,000 — then repainting the whole elevation in 3 years for ₹1.2 lakh.</li>
+        <li>Diluting exterior emulsion beyond the manufacturer's spec to stretch coverage.</li>
+        <li>Ignoring waterproofing on parapet walls and sunshades — the #1 cause of ceiling seepage after monsoon.</li>
+        <li>Hiring by lowest quote instead of scope-matched quote. Compare <Link to="/gallery" className="text-brand font-semibold hover:underline">completed projects</Link> and <Link to="/reviews" className="text-brand font-semibold hover:underline">client reviews</Link>, not just price.</li>
+      </ul>
+
+      <h2 className="text-2xl sm:text-3xl font-bold text-foreground font-[var(--font-heading)] mt-10 mb-4">Frequently Asked Questions</h2>
+
+      <h3 className="text-xl font-bold text-foreground font-[var(--font-heading)] mt-6 mb-2">How long does exterior paint last in Coimbatore?</h3>
+      <p className="text-muted-foreground leading-relaxed">
+        A premium 100% acrylic exterior emulsion applied over correct prep work lasts 7–10 years in Coimbatore. Mid-range systems last 5–7 years. Budget paints without primer typically start chalking or streaking within 2–3 years.
+      </p>
+
+      <h3 className="text-xl font-bold text-foreground font-[var(--font-heading)] mt-6 mb-2">Which is the best exterior paint brand for Tamil Nadu weather?</h3>
+      <p className="text-muted-foreground leading-relaxed">
+        Asian Paints Apex Ultima Protek, Berger WeatherCoat All Guard and Dulux Weathershield Max are all proven premium options for Tamil Nadu's climate. The correct choice depends on wall condition, budget and warranty needs.
+      </p>
+
+      <h3 className="text-xl font-bold text-foreground font-[var(--font-heading)] mt-6 mb-2">Can I paint the exterior during monsoon in Coimbatore?</h3>
+      <p className="text-muted-foreground leading-relaxed">
+        It's not recommended. Exterior emulsion needs 4–6 hours of dry weather after top-coating. If the project must happen during monsoon, an experienced contractor will schedule around rain windows and tent the working elevation.
+      </p>
+
+      <h3 className="text-xl font-bold text-foreground font-[var(--font-heading)] mt-6 mb-2">Do I need waterproofing along with exterior painting?</h3>
+      <p className="text-muted-foreground leading-relaxed">
+        Yes, for parapet walls, sunshades, terrace-to-wall junctions and any wall that shows seepage stains. A dedicated <Link to="/services/waterproof-painting" className="text-brand font-semibold hover:underline">waterproofing coat</Link> applied under the finish paint prevents 90% of monsoon leaks.
+      </p>
+
+      <h2 className="text-2xl sm:text-3xl font-bold text-foreground font-[var(--font-heading)] mt-10 mb-4">Get a Weather-Proof Exterior Paint Job in Coimbatore</h2>
+      <p className="text-muted-foreground leading-relaxed">
+        Real Tamilnadu Painters has repainted 1,100+ homes, apartments and commercial buildings across Coimbatore and Tamil Nadu. We use only branded exterior systems, follow full prep-work protocol, and back every exterior project with a workmanship warranty. To plan your repaint, contact us for a free site visit and itemised quote — or read more <Link to="/about" className="text-brand font-semibold hover:underline">about our team</Link>.
+      </p>
+    </>
+  );
+}
