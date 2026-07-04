@@ -2,6 +2,7 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ChevronRight, Calendar, User, Phone } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import project10 from "@/assets/project-10.jpg";
+import project13 from "@/assets/project-13.jpg";
 
 const WHATSAPP_URL = "https://wa.me/918680046800?text=Hi%20Real%20Tamilnadu%20Painters%2C%20I%27d%20like%20to%20get%20a%20free%20estimate%20for%20painting%20service%20for%20my%20property.%20Please%20tell%20me%20more%20about%20it.";
 
@@ -20,6 +21,14 @@ const POSTS: Record<string, {
     dateISO: "2026-05-28",
     img: project10,
     alt: "Navy and white villa exterior repainted by Real Tamilnadu Painters in Coimbatore",
+  },
+  "best-exterior-paint-coimbatore-weather": {
+    title: "Best Exterior Paint for Coimbatore Weather (2026 Homeowner's Guide)",
+    description: "Coimbatore's sun, monsoon and humidity punish exterior walls. Learn how to choose a weather-proof exterior paint that lasts 7+ years — from a local painting contractor.",
+    date: "June 12, 2026",
+    dateISO: "2026-06-12",
+    img: project13,
+    alt: "Contemporary grey duplex exterior painted by Real Tamilnadu Painters in Chinnavedampatti, Coimbatore",
   },
 };
 
