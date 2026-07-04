@@ -77,6 +77,7 @@ export const Route = createFileRoute("/blog/$slug")({
 
 function BlogPost() {
   const post = Route.useLoaderData();
+  const { slug } = Route.useParams();
   return (
     <>
       <section className="pt-32 pb-12 sm:pt-40 bg-secondary/50">
