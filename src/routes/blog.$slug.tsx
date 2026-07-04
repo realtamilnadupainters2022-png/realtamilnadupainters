@@ -100,6 +100,7 @@ function BlogPost() {
           </div>
 
           <div className="prose-content text-foreground space-y-6">
+            {slug === "best-exterior-paint-coimbatore-weather" ? <ExteriorPaintBody /> : <>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Hiring a painting contractor in Coimbatore is one of the most important decisions you'll make when refreshing your home or commercial property. The right team protects your walls for years; the wrong one leaves you with peeling paint, surprise costs and avoidable headaches. This guide walks you through exactly what to look for in 2026.
             </p>
@@ -164,6 +165,7 @@ function BlogPost() {
             <p className="text-muted-foreground leading-relaxed">
               With 14+ years of experience, 1,100+ completed projects and a 5.0 Google rating, Real Tamilnadu Painters is one of the most trusted painting contractors in Coimbatore. We use only branded paints, deploy our own trained team, share a transparent itemised quote, and back every project with a workmanship warranty. Learn more <Link to="/about" className="text-brand font-semibold hover:underline">about us</Link>.
             </p>
+            </>}
           </div>
 
           {/* Strong CTA */}
