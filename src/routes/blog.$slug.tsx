@@ -69,6 +69,19 @@ export const Route = createFileRoute("/blog/$slug")({
             mainEntityOfPage: { "@type": "WebPage", "@id": url },
           }),
         },
+        ...(params.slug === "best-exterior-paint-coimbatore-weather" ? [{
+          type: "application/ld+json" as const,
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              { "@type": "Question", name: "How long does exterior paint last in Coimbatore?", acceptedAnswer: { "@type": "Answer", text: "Premium 100% acrylic exterior emulsions applied over proper surface prep last 7–10 years in Coimbatore. Mid-range systems last 5–7 years; budget paints without primer typically fail in 2–3 years." } },
+              { "@type": "Question", name: "Which is the best exterior paint brand for Tamil Nadu weather?", acceptedAnswer: { "@type": "Answer", text: "Asian Paints Apex Ultima Protek, Berger WeatherCoat All Guard and Dulux Weathershield Max are all proven premium choices for Tamil Nadu's UV, heat and monsoon conditions." } },
+              { "@type": "Question", name: "Can I paint the exterior during monsoon in Coimbatore?", acceptedAnswer: { "@type": "Answer", text: "It's not recommended. Exterior emulsion needs 4–6 hours of dry weather after top-coating. If work must happen in monsoon, an experienced contractor schedules around rain windows and tents the working elevation." } },
+              { "@type": "Question", name: "Do I need waterproofing along with exterior painting?", acceptedAnswer: { "@type": "Answer", text: "Yes — for parapet walls, sunshades and wall-junctions. A dedicated waterproofing coat under the finish paint prevents most monsoon seepage in Coimbatore homes." } },
+            ],
+          }),
+        }] : []),
       ],
     };
   },
