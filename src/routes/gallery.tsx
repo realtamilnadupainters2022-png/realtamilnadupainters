@@ -12,6 +12,11 @@ import project9 from "@/assets/project-9.jpg";
 import project10 from "@/assets/project-10.jpg";
 import project11 from "@/assets/project-11.jpg";
 import project12 from "@/assets/project-12.jpg";
+import project13 from "@/assets/project-13.jpg";
+import project14 from "@/assets/project-14.jpg";
+import project15 from "@/assets/project-15.jpg";
+import project16 from "@/assets/project-16.jpg";
+import project17 from "@/assets/project-17.jpg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -30,6 +35,11 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const projects = [
+  { img: project13, title: "Contemporary Grey Duplex Exterior Painting", loc: "Chinnavedampatti, Coimbatore", cat: "Exterior Painting" },
+  { img: project14, title: "Twin Villa Cream & White Exterior Finish", loc: "Saravanampatti, Coimbatore", cat: "Exterior Painting" },
+  { img: project15, title: "Textured Triple-Storey Home Repainting", loc: "Vadavalli, Coimbatore", cat: "Texture Painting" },
+  { img: project16, title: "Modern Grey & Terracotta Villa Painting", loc: "Peelamedu, Coimbatore", cat: "Exterior Painting" },
+  { img: project17, title: "Premium Apartment Block Exterior Painting", loc: "Ganapathy, Coimbatore", cat: "Commercial Painting" },
   { img: project12, title: "Modern Two-Storey Home Exterior", loc: "Coimbatore", cat: "Exterior Painting" },
   { img: project11, title: "Apartment Building Exterior Repaint", loc: "Coimbatore", cat: "Commercial Painting" },
   { img: project10, title: "Navy & White Villa Exterior", loc: "Coimbatore", cat: "Exterior Painting" },
